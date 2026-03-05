@@ -1,25 +1,14 @@
 import Image from "next/image";
 import {
-  Star,
-  MapPin,
   Phone,
-  Menu,
-  ChevronDown,
-  Search,
-  ArrowRight,
-  ArrowRightCircle,
-  FileText,
   BadgeCheck,
   Briefcase,
   Landmark,
-  Plane,
-  Flag,
   Brain,
   History,
   CheckCircle,
   Eye,
   MessageCircle,
-  User,
   Euro, Building2, Globe,
   Mail,
   Hotel,
@@ -27,6 +16,15 @@ import {
   ShieldCheck,
   Headphones,
   HeartPulse,
+  Laptop,
+  Monitor,
+  Stethoscope,
+  TrendingUp,
+  Users,
+  GraduationCap,
+  PlaneTakeoff,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 import Link from "next/link";
@@ -59,85 +57,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          {/* <div className="relative grid grid-cols-2 gap-4">
-            <div className="relative bg-slate-200 p-6 rounded-lg col-span-2 overflow-hidden">
-              <div className="absolute inset-0 bg-linear-to-br from-emerald-500/80 to-emerald-700/80 -rotate-12 scale-150" />
-              <div className="relative flex items-end h-full">
-                <div className="md:w-2/3">
-                  <h2 className="text-3xl font-bold text-white">
-                    Помощь в оформлении документов
-                  </h2>
-                  <p
-                    className="mt-2 text-sm"
-                    style={{ color: "rgba(255,255,255,0.8)" }}
-                  >
-                    для РВП, ВНЖ, гражданство Казахстана
-                  </p>
-                  <button className="mt-6 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/30 transition text-white">
-                    Получить бесплатную консультацию
-                  </button>
-                </div>
-                <div className="hidden md:block">
-                  <Image
-                    alt="Smiling woman holding a passport"
-                    className="absolute bottom-0 right-0 h-full w-auto object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-UZhsS_xZURjmWpvp7FL5faZmuYy9k0YcsKzdfbRFn2OyQmqPKMsVETQ54GmEjwurUj99wR0LCt-tOVGPdHaMcXce0znxB5Id-39AMtuJNhgL_RmZHAC_78jPYqQD3VVLW6H4T0s9jRmAKLQ9kbED2F1w9eeQYo113AnZKP4tMT3obkqWKt0kXVmj-v0JUgtgPSxkhy4RONbr2nmbcC6PGF2LROodnIlkTe3UwN22eyivVbOLYlX8527oaKwKlGrj4vSXAq8bnuU"
-                    width={242}
-                    height={203}
-                    style={{
-                      position: "absolute",
-                      bottom: 0,
-                      right: 0,
-                      height: "100%",
-                      width: "auto",
-                      objectFit: "cover",
-                    }}
-                    unoptimized
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="relative bg-slate-100 p-4 rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-linear-to-br from-emerald-500/70 to-emerald-700/70 -rotate-12 scale-150" />
-              <div className="relative z-10">
-                <h3 className="font-bold text-white">Полный список услуг</h3>
-                <Image
-                  alt="Document with a pen"
-                  className="my-4 rounded-lg"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8C0gc2yDhlH_AemeHAgghDHfgzClW-Q6_X9KfX0dGHpnHSP23o6yJEmq9NR8EFJ2grtKrrxnadrI1LnhpAXdQqTbkF6HADNao9eUgw2u8PaKbuxT_RecZwdF2IVJ3h-5wtvdQ5DMVBF_k4hjkJZQyQs21tbku6FgghkfYUQ8F7JxVg-gIGNQOvuuReYv9VMLvgJPACGBcRmidhqp22hGvfNCDqylqMv7PSaQtYA6R7iDz3yepTUbp8DjevvLDfltVmbner-6dM2M"
-                  width={252}
-                  height={135}
-                  style={{ borderRadius: "0.5rem" }}
-                  unoptimized
-                />
-                <button className="bg-white/90 text-slate-700 backdrop-blur-sm px-4 py-1.5 rounded-lg text-xs font-medium hover:bg-white transition flex items-center">
-                  Открыть
-                  <ArrowRight className="text-sm ml-1 h-4 w-4" />
-                </button>
-              </div>
-            </div>
-            <div className="relative bg-slate-100 p-4 rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-linear-to-br from-emerald-500/70 to-emerald-700/70 -rotate-12 scale-150" />
-              <div className="relative z-10">
-                <h3 className="font-bold text-white">
-                  Подробнее про консультации
-                </h3>
-                <Image
-                  alt="Woman at a desk during a consultation"
-                  className="my-4 rounded-lg"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqnACYUTx3oocQgypZMSRiG1Pu4up1HL6XgKZ3sYHEJX8gAP46aFUKGhuMBbX9nLRTlr96R1zyTA6TiGP1FCcolm2ze6LEymhX1vF2vgcaHDHqBGshE2OFqG0j5s2gvuZ3VTKpRVm7hRD4KbotM_Yf13ywi54wihQ95CVX7TaC6k0iTBG4zcI4Dv9M_SiY8jD14fWDUh06WRddnEtv6phNkXdHIOybFi3_Oj0ni_LOGMy3NFkG1LP_oe-DtTkMlNcQSfIH58-99QE"
-                  width={252}
-                  height={135}
-                  style={{ borderRadius: "0.5rem" }}
-                  unoptimized
-                />
-                <button className="bg-white/90 text-slate-700 backdrop-blur-sm px-4 py-1.5 rounded-lg text-xs font-medium hover:bg-white transition flex items-center">
-                  Узнать
-                  <ArrowRight className="text-sm ml-1 h-4 w-4" />
-                </button>
-              </div>
-            </div>
-          </div> */}
 
           <div className="relative grid grid-cols-2 gap-4">
           <div className="space-y-4">
@@ -183,6 +102,68 @@ export default function Home() {
           </div>
         </div>
 
+
+        <section className="py-8 bg-white shadow-xl">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex items-end justify-between mb-10 bg-white p-6 rounded-xl shadow-lg">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tight">Визы в Казахстан</h2>
+                <p className="text-slate-500">Поможем оформить разрешение на въезд для любых целей</p>
+              </div>
+              <div className="flex gap-2">
+                <button className="p-2 border border-primary/20 rounded-lg hover:bg-primary/5 transition-all shadow-md">
+                  <ChevronLeft size={20} />
+                </button>
+                <button className="p-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all shadow-md">
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {/* Visa Types Tags */}
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <PlaneTakeoff className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Туристические</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Briefcase className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Рабочие</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <GraduationCap className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Студенческие</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Building2 className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Бизнес-визы</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Users className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">На воссоединение</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <TrendingUp className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Инвестиционные</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Stethoscope className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">На лечение</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Home className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">ПМЖ</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Monitor className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Электронная</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Laptop className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Digital Nomad</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
         {/* <section className="py-14" id="services">
@@ -295,6 +276,67 @@ export default function Home() {
             </div>
           </div>
         </section> */}
+
+        <section className="py-16 bg-white shadow-xl">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex items-end justify-between mb-10 bg-white p-6 rounded-xl shadow-lg">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tight">Визы в Казахстан</h2>
+                <p className="text-slate-500">Поможем оформить разрешение на въезд для любых целей</p>
+              </div>
+              {/* <div className="flex gap-2">
+                <button className="p-2 border border-primary/20 rounded-lg hover:bg-primary/5 transition-all shadow-md">
+                  <ChevronLeft size={20} />
+                </button>
+                <button className="p-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all shadow-md">
+                  <ChevronRight size={20} />
+                </button>
+              </div> */}
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <PlaneTakeoff className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Туристические</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Briefcase className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Рабочие</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <GraduationCap className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Студенческие</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Building2 className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Бизнес-визы</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Users className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">На воссоединение</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <TrendingUp className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Инвестиционные</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Stethoscope className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">На лечение</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Home className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">ПМЖ</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Monitor className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Электронная</p>
+              </div>
+              <div className="group p-6 bg-background-light rounded-xl border border-transparent hover:border-primary/30 transition-all text-center cursor-pointer soft-shadow shadow">
+                <Laptop className="text-primary mb-3" size={32} />
+                <p className="font-bold text-sm">Digital Nomad</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section className="pt-10 overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -623,71 +665,71 @@ export default function Home() {
         </section>
 
         <section className="py-10">
-    <div className="max-w-7xl mx-auto">
-      <div className="flex mb-6">
-        <h2 className="text-3xl font-bold tracking-tight">Вопросы</h2>
-      </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Post 1 */}
-        <div className="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-4">
-          <div className="aspect-video rounded-2xl overflow-hidden mb-6 soft-shadow relative shadow">
-            <Image
-              alt="Legal Documents"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmYOf_hW1pOQ-GdqE4Hue0hTpVJIeYNNF-9pSDwS4PYlIvVOdJmg4ux31OXFcCJjvUOSC90XMPgfchtZhVR4wL16CDkNpUyuw-FA1nlwJCoe15Ek9t34KGv6UhFJYvJd8TOYKKEu99JAMshcxHz4GUAB7NbaroGJ31HSVqYtEWYNYZK-Bee_ZQTmMzY4XHiKvdoJa1YA7VpzbR6HjSvl_0hImV-ZN1SeV0l2-eI8zzcb2I_Z4p0d73MbtvKYyX_2ib8RGR46JNSQc"
-              data-alt="Stack of legal migration documents on a desk"
-              fill
-              sizes="(max-width:1024px) 100vw, 384px"
-              style={{ objectFit: 'cover' }}
-              priority
-            />
-            <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">Гайд</div>
+          <div className="max-w-7xl mx-auto">
+            <div className="flex mb-6">
+              <h2 className="text-3xl font-bold tracking-tight">Вопросы</h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Post 1 */}
+              <div className="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-4">
+                <div className="aspect-video rounded-2xl overflow-hidden mb-6 soft-shadow relative shadow">
+                  <Image
+                    alt="Legal Documents"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmYOf_hW1pOQ-GdqE4Hue0hTpVJIeYNNF-9pSDwS4PYlIvVOdJmg4ux31OXFcCJjvUOSC90XMPgfchtZhVR4wL16CDkNpUyuw-FA1nlwJCoe15Ek9t34KGv6UhFJYvJd8TOYKKEu99JAMshcxHz4GUAB7NbaroGJ31HSVqYtEWYNYZK-Bee_ZQTmMzY4XHiKvdoJa1YA7VpzbR6HjSvl_0hImV-ZN1SeV0l2-eI8zzcb2I_Z4p0d73MbtvKYyX_2ib8RGR46JNSQc"
+                    data-alt="Stack of legal migration documents on a desk"
+                    fill
+                    sizes="(max-width:1024px) 100vw, 384px"
+                    style={{ objectFit: 'cover' }}
+                    priority
+                  />
+                  <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">Гайд</div>
+                </div>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Как получить ВНЖ в Казахстане в 2026 году?</h3>
+                <p className="text-slate-500 text-sm line-clamp-3 mb-4">Подробная инструкция по сбору документов, срокам рассмотрения и основным требованиям для получения вида на жительство...</p>
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-400">12 Октября 2026</span>
+              </div>
+              {/* Post 2 */}
+              <div className="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-4">
+                <div className="aspect-video rounded-2xl overflow-hidden mb-6 soft-shadow relative shadow">
+                  <Image
+                    alt="Meeting"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC8QF-dedHBSPL-QG5238jDF-6frXS5LdTOBaesD08gjVXWIY-mDiu_tTCZJMaSHWPLCXnZAouFLF_TZ1ZEfeTTAOCIxDh5cMa9IuaHnpbhR80ZHEVMMmunBOd_Ym5I2nHhMYKkjzNNKW1FXHdDzj45eRD_wWLlL0zLpSgEu7OovQS-8AK0gZmHFAthI8ql0Zm3-YLv-V3pEpihE9eIEjH17srx__7w5g3oVzcU_Ab8V-vcpd0HZ9CknpoDXEHjrfO8riU4xSH6-o"
+                    data-alt="Business professionals in a corporate meeting setting"
+                    fill
+                    sizes="(max-width:1024px) 100vw, 384px"
+                    style={{ objectFit: 'cover' }}
+                    priority
+                  />
+                  <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">Бизнес</div>
+                </div>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Digital Nomad Visa: Новые возможности для IT</h3>
+                <p className="text-slate-500 text-sm line-clamp-3 mb-4">Казахстан запустил программу для цифровых кочевников. Разбираемся, кто может претендовать и какие льготы это дает...</p>
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-400">05 Октября 2026</span>
+              </div>
+              {/* Post 3 */}
+              <div className="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-4">
+                <div className="aspect-video rounded-2xl overflow-hidden mb-6 soft-shadow relative shadow">
+                  <Image
+                    alt="Law"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAE8JWIqZxdXbN47Jxtwla685FfeS2LhXQT1qyh9leH4msvAFnAlh0mE_spieXkzZH1ShFnjgpQF8-N0L1HsJkxeu5aZku3yT87wexyhKR_MtdSN4Med6fbS8g5FZ7n_moZ1obfQDvIDEXlEf8P13kbKHw5mN1LemXM77DBD_AecKW9R6XHDhSflZWhmMEPyxfk6qtND0SRVkjdJWsGLk0-eHx8_DUS0ddMfJYLx26taLWyA0Qv2EPFoNQh3k2PpGDj9HKfTF0BIE"
+                    data-alt="Gavel and law books representing legal services"
+                    fill
+                    sizes="(max-width:1024px) 100vw, 384px"
+                    style={{ objectFit: 'cover' }}
+                    priority
+                  />
+                  <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">Законодательство</div>
+                </div>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Изменения в миграционном учете</h3>
+                <p className="text-slate-500 text-sm line-clamp-3 mb-4">Важные поправки в законодательстве РК, которые вступают в силу с начала следующего месяца. О чем нужно знать иностранцам...</p>
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-400">28 Сентября 2026</span>
+              </div>
+            </div>
           </div>
-          <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Как получить ВНЖ в Казахстане в 2026 году?</h3>
-          <p className="text-slate-500 text-sm line-clamp-3 mb-4">Подробная инструкция по сбору документов, срокам рассмотрения и основным требованиям для получения вида на жительство...</p>
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-400">12 Октября 2026</span>
-        </div>
-        {/* Post 2 */}
-        <div className="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-4">
-          <div className="aspect-video rounded-2xl overflow-hidden mb-6 soft-shadow relative shadow">
-            <Image
-              alt="Meeting"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC8QF-dedHBSPL-QG5238jDF-6frXS5LdTOBaesD08gjVXWIY-mDiu_tTCZJMaSHWPLCXnZAouFLF_TZ1ZEfeTTAOCIxDh5cMa9IuaHnpbhR80ZHEVMMmunBOd_Ym5I2nHhMYKkjzNNKW1FXHdDzj45eRD_wWLlL0zLpSgEu7OovQS-8AK0gZmHFAthI8ql0Zm3-YLv-V3pEpihE9eIEjH17srx__7w5g3oVzcU_Ab8V-vcpd0HZ9CknpoDXEHjrfO8riU4xSH6-o"
-              data-alt="Business professionals in a corporate meeting setting"
-              fill
-              sizes="(max-width:1024px) 100vw, 384px"
-              style={{ objectFit: 'cover' }}
-              priority
-            />
-            <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">Бизнес</div>
-          </div>
-          <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Digital Nomad Visa: Новые возможности для IT</h3>
-          <p className="text-slate-500 text-sm line-clamp-3 mb-4">Казахстан запустил программу для цифровых кочевников. Разбираемся, кто может претендовать и какие льготы это дает...</p>
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-400">05 Октября 2026</span>
-        </div>
-        {/* Post 3 */}
-        <div className="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-4">
-          <div className="aspect-video rounded-2xl overflow-hidden mb-6 soft-shadow relative shadow">
-            <Image
-              alt="Law"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAE8JWIqZxdXbN47Jxtwla685FfeS2LhXQT1qyh9leH4msvAFnAlh0mE_spieXkzZH1ShFnjgpQF8-N0L1HsJkxeu5aZku3yT87wexyhKR_MtdSN4Med6fbS8g5FZ7n_moZ1obfQDvIDEXlEf8P13kbKHw5mN1LemXM77DBD_AecKW9R6XHDhSflZWhmMEPyxfk6qtND0SRVkjdJWsGLk0-eHx8_DUS0ddMfJYLx26taLWyA0Qv2EPFoNQh3k2PpGDj9HKfTF0BIE"
-              data-alt="Gavel and law books representing legal services"
-              fill
-              sizes="(max-width:1024px) 100vw, 384px"
-              style={{ objectFit: 'cover' }}
-              priority
-            />
-            <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">Законодательство</div>
-          </div>
-          <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Изменения в миграционном учете</h3>
-          <p className="text-slate-500 text-sm line-clamp-3 mb-4">Важные поправки в законодательстве РК, которые вступают в силу с начала следующего месяца. О чем нужно знать иностранцам...</p>
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-400">28 Сентября 2026</span>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
         {/* <section className="py-16" id='section-id1'>
           <div className="relative bg-primary rounded-2xl p-8 md:p-16 overflow-hidden">
