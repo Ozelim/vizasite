@@ -13,8 +13,8 @@ import {
 
 import React from "react";
 import Link from "next/link";
-import { VisaCalculatorModal } from "../visa-calculator/vis-calculator-modal";
 import { Button } from "../ui/button";
+import VisaCalculatorModal, { VisaCalculatorButton } from "../visa-calculator/vis-calculator-modal";
 
 export default function Header () {
 
@@ -108,20 +108,17 @@ export default function Header () {
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Button
-              onClick={setIsModalOpen}
-              className="text-primary font-semibold hidden sm:inline-block whitespace-nowrap px-4 py-2"
-              variant="outline"
-            >
-              Бесплатная консультация
-            </Button>
+
+            <VisaCalculatorButton
+              title='Бесплатная консультация'
+              buttonOptions={{
+                className: "text-primary font-semibold hidden sm:inline-block whitespace-nowrap px-4 py-2",
+                variant: 'outline'
+              }}
+            />
           </div>
         </nav>
       </header>
-      <VisaCalculatorModal 
-        open={isModalOpen} 
-        onOpenChange={setIsModalOpen} 
-      />
     </>
   );
 };

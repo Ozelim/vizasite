@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React from 'react'
 import {
   Dialog,
   DialogContent,
@@ -13,8 +13,18 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Checkbox } from "@/components/ui/checkbox"
-import { ChevronLeft, ChevronRight, Check, Phone, User, Search } from "lucide-react"
+import { ChevronLeft, ChevronRight, Check, Phone, User, Search, FileText, Home, UserCheck, Briefcase, Clock } from "lucide-react"
 import { cn } from "@/lib/utils"
+
+const serviceTypes = [
+  { value: "visa", label: "Виза (краткосрочная/долгосрочная)", icon: FileText },
+  { value: "rvp", label: "РВП (разрешение на временное проживание)", icon: Home },
+  { value: "vnj", label: "ВНЖ (вид на жительство)", icon: Home },
+  { value: "registration", label: "Регистрация иностранного гражданина", icon: UserCheck },
+  { value: "work_permit", label: "Разрешение на работу", icon: Briefcase },
+  { value: "invitation", label: "Приглашение для визы", icon: FileText },
+  { value: "extension", label: "Продление документов", icon: Clock },
+]
 
 const countries = [
   { continent: "Европа", items: ["Германия", "Франция", "Италия", "Испания", "Великобритания", "Нидерланды", "Швейцария", "Австрия", "Польша", "Чехия", "Португалия", "Греция", "Бельгия", "Швеция", "Норвегия", "Дания", "Финляндия", "Ирландия", "Венгрия", "Румыния", "Болгария", "Хорватия", "Словакия", "Словения", "Литва", "Латвия", "Эстония", "Кипр", "Мальта", "Люксембург", "Исландия", "Сербия", "Черногория", "Северная Македония", "Албания", "Босния и Герцеговина"] },
@@ -23,6 +33,56 @@ const countries = [
   { continent: "Южная Америка", items: ["Бразилия", "Аргентина", "Чили", "Колумбия", "Перу", "Венесуэла", "Эквадор", "Боливия", "Парагвай", "Уругвай", "Гайана", "Суринам"] },
   { continent: "Африка", items: ["Египет", "Марокко", "Тунис", "ЮАР", "Кения", "Танзания", "Эфиопия", "Нигерия", "Гана", "Сенегал", "Маврикий", "Мадагаскар", "Алжир", "Ливия", "Намибия", "Ботсвана", "Зимбабве", "Мозамбик", "Ангола", "Камерун", "Кот-д'Ивуар", "Уганда", "Руанда"] },
   { continent: "Океания", items: ["Австралия", "Новая Зеландия", "Фиджи", "Папуа — Новая Гвинея", "Самоа", "Тонга", "Вануату", "Соломоновы острова", "Новая Каледония", "Французская Полинезия", "Гуам", "Палау"] },
+]
+
+const tripPurposes = [
+  { value: "tourism", label: "Туризм" },
+  { value: "work", label: "Работа" },
+  { value: "study", label: "Учеба" },
+  { value: "business", label: "Бизнес" },
+]
+
+const stayDurations = [
+  { value: "up_to_30", label: "До 30 дней" },
+  { value: "30_90", label: "30-90 дней" },
+  { value: "90_180", label: "90-180 дней" },
+  { value: "180_plus", label: "Более 180 дней" },
+  { value: "1_year", label: "1 год" },
+  { value: "long_term", label: "Долгосрочная" },
+]
+
+const rvpBases = [
+  { value: "work_contract", label: "Трудовой договор" },
+  { value: "study", label: "Учеба" },
+  { value: "business", label: "Бизнес" },
+  { value: "family", label: "Воссоединение семьи" },
+]
+
+const workTypes = [
+  { value: "qualified", label: "Квалифицированный специалист" },
+  { value: "seasonal", label: "Сезонная работа" },
+  { value: "construction", label: "Строительство" },
+  { value: "service", label: "Сфера услуг" },
+  { value: "it", label: "IT-специалист" },
+  { value: "other", label: "Другое" },
+]
+
+const contractDurations = [
+  { value: "up_to_3", label: "До 3 месяцев" },
+  { value: "3_6", label: "3-6 месяцев" },
+  { value: "6_12", label: "6-12 месяцев" },
+  { value: "1_year_plus", label: "Более 1 года" },
+]
+
+const additionalServices = [
+  "Заполнение анкеты",
+  "Бронь отеля",
+  "Бронь авиабилетов",
+  "Перевод документов",
+  "Страхование",
+  "Вызов специалиста",
+  "Проверка документов",
+  "Услуги для граждан РФ",
 ]
 
 const visaTypes = [
@@ -70,32 +130,65 @@ const applicantOptions = [
   { value: "other", label: "Другое" },
 ]
 
-const additionalServices = [
-  "Заполнение анкеты",
-  "Бронь отеля",
-  "Бронь авиабилетов",
-  "Перевод документов",
-  "Страхование",
-  "Вызов специалиста",
-  "Проверка документов",
-  "Услуги для граждан РФ",
-  "Работа за рубежом",
-]
+export function VisaCalculatorButton({title, buttonOptions}) {
 
-export function VisaCalculatorModal({ open, onOpenChange }) {
-  const [step, setStep] = useState(1)
-  const [countrySearch, setCountrySearch] = useState("")
-  const [formData, setFormData] = useState({
+  const [isModalOpen, setIsModalOpen] = React.useState(false)
+
+  return (
+    <>
+      <Button
+        {...buttonOptions}
+        onClick={setIsModalOpen}
+      >
+        {title}
+      </Button>
+      <VisaCalculatorModal 
+        open={isModalOpen} 
+        onOpenChange={setIsModalOpen} 
+      />
+    </>
+  )
+}
+
+export default function VisaCalculatorModal({ open, onOpenChange }) {
+  const [step, setStep] = React.useState(1)
+  const [countrySearch, setCountrySearch] = React.useState("")
+  const [formData, setFormData] = React.useState({
+    serviceType: "",
     country: "",
-    visaType: "",
+    tripPurpose: "",
+    stayDuration: "",
+    rvpBase: "",
+    familyMembers: "",
+    workType: "",
+    contractDuration: "",
     applicants: "",
     services: [],
     name: "",
     phone: "",
   })
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = React.useState(false)
 
-  const totalSteps = 5
+  const getSteps = () => {
+    const baseSteps = ["service"]
+    
+    if (formData.serviceType === "visa") {
+      baseSteps.push("country", "purpose", "duration")
+    } else if (formData.serviceType === "rvp" || formData.serviceType === "vnj") {
+      baseSteps.push("rvp_base", "family_members")
+    } else if (formData.serviceType === "work_permit") {
+      baseSteps.push("work_type", "contract_duration")
+    } else if (formData.serviceType === "registration" || formData.serviceType === "invitation" || formData.serviceType === "extension") {
+      // No additional steps for these services
+    }
+    
+    baseSteps.push("applicants", "additional_services", "contact")
+    return baseSteps
+  }
+
+  const steps = getSteps()
+  const totalSteps = steps.length
+  const currentStepName = steps[step - 1]
 
   const handleNext = () => {
     if (step < totalSteps) {
@@ -119,28 +212,47 @@ export function VisaCalculatorModal({ open, onOpenChange }) {
     setTimeout(() => {
       setStep(1)
       setFormData({
+        serviceType: "",
         country: "",
-        visaType: "",
+        tripPurpose: "",
+        stayDuration: "",
+        rvpBase: "",
+        familyMembers: "",
+        workType: "",
+        contractDuration: "",
         applicants: "",
         services: [],
         name: "",
         phone: "",
       })
       setIsSubmitted(false)
+      setCountrySearch("")
     }, 300)
   }
 
   const canProceed = () => {
-    switch (step) {
-      case 1:
+    switch (currentStepName) {
+      case "service":
+        return formData.serviceType !== ""
+      case "country":
         return formData.country !== ""
-      case 2:
-        return formData.visaType !== ""
-      case 3:
+      case "purpose":
+        return formData.tripPurpose !== ""
+      case "duration":
+        return formData.stayDuration !== ""
+      case "rvp_base":
+        return formData.rvpBase !== ""
+      case "family_members":
+        return formData.familyMembers !== ""
+      case "work_type":
+        return formData.workType !== ""
+      case "contract_duration":
+        return formData.contractDuration !== ""
+      case "applicants":
         return formData.applicants !== ""
-      case 4:
+      case "additional_services":
         return true
-      case 5:
+      case "contact":
         return formData.name.trim() !== "" && formData.phone.trim() !== ""
       default:
         return false
@@ -164,6 +276,35 @@ export function VisaCalculatorModal({ open, onOpenChange }) {
           country.toLowerCase().includes(countrySearch.toLowerCase())
         )
       })).filter(region => region.items.length > 0)
+
+  const getStepTitle = () => {
+    switch (currentStepName) {
+      case "service":
+        return "Выберите услугу"
+      case "country":
+        return "Страна гражданства"
+      case "purpose":
+        return "Цель поездки"
+      case "duration":
+        return "Срок пребывания"
+      case "rvp_base":
+        return "Основание для РВП/ВНЖ"
+      case "family_members":
+        return "Количество членов семьи"
+      case "work_type":
+        return "Тип работы"
+      case "contract_duration":
+        return "Срок действия договора"
+      case "applicants":
+        return "Количество заявителей"
+      case "additional_services":
+        return "Дополнительные услуги"
+      case "contact":
+        return "Ваши контактные данные"
+      default:
+        return ""
+    }
+  }
 
   if (isSubmitted) {
     return (
@@ -190,7 +331,7 @@ export function VisaCalculatorModal({ open, onOpenChange }) {
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-hidden flex flex-col">
         <DialogHeader>
-          <DialogTitle className="text-foreground">Калькулятор виз</DialogTitle>
+          <DialogTitle className="text-foreground">Калькулятор услуг</DialogTitle>
           <DialogDescription>
             Шаг {step} из {totalSteps}
           </DialogDescription>
@@ -209,10 +350,40 @@ export function VisaCalculatorModal({ open, onOpenChange }) {
         </DialogHeader>
 
         <div className="flex-1 overflow-y-auto py-4">
-          {/* Step 1: Country */}
-          {step === 1 && (
+          {/* Step: Service Type */}
+          {currentStepName === "service" && (
             <div className="space-y-4">
-              <h3 className="font-medium text-foreground">Выберите страну</h3>
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
+              <div className="space-y-2">
+                {serviceTypes.map((service) => {
+                  const Icon = service.icon
+                  return (
+                    <button
+                      key={service.value}
+                      onClick={() => {
+                        setFormData(prev => ({ ...prev, serviceType: service.value }))
+                        setStep(1) // Reset to recalculate steps
+                      }}
+                      className={cn(
+                        "w-full flex items-center gap-3 rounded-lg border px-4 py-3 text-left transition-colors",
+                        formData.serviceType === service.value
+                          ? "border-primary bg-primary/10"
+                          : "border-border hover:border-primary/50"
+                      )}
+                    >
+                      <Icon className="h-5 w-5 text-muted-foreground" />
+                      <span className="text-foreground">{service.label}</span>
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Step: Country (for Visa) */}
+          {currentStepName === "country" && (
+            <div className="space-y-4">
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
@@ -252,41 +423,191 @@ export function VisaCalculatorModal({ open, onOpenChange }) {
             </div>
           )}
 
-          {/* Step 2: Visa Type */}
-          {step === 2 && (
+          {/* Step: Trip Purpose (for Visa) */}
+          {currentStepName === "purpose" && (
             <div className="space-y-4">
-              <h3 className="font-medium text-foreground">Выберите тип визы</h3>
-              <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2">
-                {visaTypes.map((category) => (
-                  <div key={category.category}>
-                    <p className="text-sm font-medium text-muted-foreground mb-2">{category.category}</p>
-                    <div className="space-y-2">
-                      {category.items.map((visa) => (
-                        <button
-                          key={visa.code}
-                          onClick={() => setFormData(prev => ({ ...prev, visaType: visa.code }))}
-                          className={cn(
-                            "w-full rounded-lg border px-3 py-2 text-left transition-colors",
-                            formData.visaType === visa.code
-                              ? "border-primary bg-primary/10"
-                              : "border-border hover:border-primary/50"
-                          )}
-                        >
-                          <span className="font-medium text-foreground">{visa.code}</span>
-                          <span className="text-sm text-muted-foreground"> — {visa.description}</span>
-                        </button>
-                      ))}
-                    </div>
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
+              <RadioGroup
+                value={formData.tripPurpose}
+                onValueChange={(value) => setFormData(prev => ({ ...prev, tripPurpose: value }))}
+                className="space-y-2"
+              >
+                {tripPurposes.map((option) => (
+                  <div
+                    key={option.value}
+                    className={cn(
+                      "flex items-center space-x-3 rounded-lg border px-4 py-3 transition-colors cursor-pointer",
+                      formData.tripPurpose === option.value
+                        ? "border-primary bg-primary/10"
+                        : "border-border hover:border-primary/50"
+                    )}
+                    onClick={() => setFormData(prev => ({ ...prev, tripPurpose: option.value }))}
+                  >
+                    <RadioGroupItem value={option.value} id={`purpose-${option.value}`} />
+                    <Label htmlFor={`purpose-${option.value}`} className="cursor-pointer flex-1 text-foreground">
+                      {option.label}
+                    </Label>
                   </div>
                 ))}
-              </div>
+              </RadioGroup>
             </div>
           )}
 
-          {/* Step 3: Number of Applicants */}
-          {step === 3 && (
+          {/* Step: Stay Duration (for Visa) */}
+          {currentStepName === "duration" && (
             <div className="space-y-4">
-              <h3 className="font-medium text-foreground">Количество заявителей</h3>
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
+              <RadioGroup
+                value={formData.stayDuration}
+                onValueChange={(value) => setFormData(prev => ({ ...prev, stayDuration: value }))}
+                className="space-y-2"
+              >
+                {stayDurations.map((option) => (
+                  <div
+                    key={option.value}
+                    className={cn(
+                      "flex items-center space-x-3 rounded-lg border px-4 py-3 transition-colors cursor-pointer",
+                      formData.stayDuration === option.value
+                        ? "border-primary bg-primary/10"
+                        : "border-border hover:border-primary/50"
+                    )}
+                    onClick={() => setFormData(prev => ({ ...prev, stayDuration: option.value }))}
+                  >
+                    <RadioGroupItem value={option.value} id={`duration-${option.value}`} />
+                    <Label htmlFor={`duration-${option.value}`} className="cursor-pointer flex-1 text-foreground">
+                      {option.label}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+            </div>
+          )}
+
+          {/* Step: RVP/VNJ Base */}
+          {currentStepName === "rvp_base" && (
+            <div className="space-y-4">
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
+              <RadioGroup
+                value={formData.rvpBase}
+                onValueChange={(value) => setFormData(prev => ({ ...prev, rvpBase: value }))}
+                className="space-y-2"
+              >
+                {rvpBases.map((option) => (
+                  <div
+                    key={option.value}
+                    className={cn(
+                      "flex items-center space-x-3 rounded-lg border px-4 py-3 transition-colors cursor-pointer",
+                      formData.rvpBase === option.value
+                        ? "border-primary bg-primary/10"
+                        : "border-border hover:border-primary/50"
+                    )}
+                    onClick={() => setFormData(prev => ({ ...prev, rvpBase: option.value }))}
+                  >
+                    <RadioGroupItem value={option.value} id={`rvp-${option.value}`} />
+                    <Label htmlFor={`rvp-${option.value}`} className="cursor-pointer flex-1 text-foreground">
+                      {option.label}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+            </div>
+          )}
+
+          {/* Step: Family Members */}
+          {currentStepName === "family_members" && (
+            <div className="space-y-4">
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
+              <p className="text-sm text-muted-foreground">Укажите количество членов семьи, если это применимо</p>
+              <RadioGroup
+                value={formData.familyMembers}
+                onValueChange={(value) => setFormData(prev => ({ ...prev, familyMembers: value }))}
+                className="space-y-2"
+              >
+                {["0", "1", "2", "3", "4", "5+"].map((num) => (
+                  <div
+                    key={num}
+                    className={cn(
+                      "flex items-center space-x-3 rounded-lg border px-4 py-3 transition-colors cursor-pointer",
+                      formData.familyMembers === num
+                        ? "border-primary bg-primary/10"
+                        : "border-border hover:border-primary/50"
+                    )}
+                    onClick={() => setFormData(prev => ({ ...prev, familyMembers: num }))}
+                  >
+                    <RadioGroupItem value={num} id={`family-${num}`} />
+                    <Label htmlFor={`family-${num}`} className="cursor-pointer flex-1 text-foreground">
+                      {num === "0" ? "Без членов семьи" : num === "5+" ? "5 и более" : num}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+            </div>
+          )}
+
+          {/* Step: Work Type */}
+          {currentStepName === "work_type" && (
+            <div className="space-y-4">
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
+              <RadioGroup
+                value={formData.workType}
+                onValueChange={(value) => setFormData(prev => ({ ...prev, workType: value }))}
+                className="space-y-2"
+              >
+                {workTypes.map((option) => (
+                  <div
+                    key={option.value}
+                    className={cn(
+                      "flex items-center space-x-3 rounded-lg border px-4 py-3 transition-colors cursor-pointer",
+                      formData.workType === option.value
+                        ? "border-primary bg-primary/10"
+                        : "border-border hover:border-primary/50"
+                    )}
+                    onClick={() => setFormData(prev => ({ ...prev, workType: option.value }))}
+                  >
+                    <RadioGroupItem value={option.value} id={`work-${option.value}`} />
+                    <Label htmlFor={`work-${option.value}`} className="cursor-pointer flex-1 text-foreground">
+                      {option.label}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+            </div>
+          )}
+
+          {/* Step: Contract Duration */}
+          {currentStepName === "contract_duration" && (
+            <div className="space-y-4">
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
+              <RadioGroup
+                value={formData.contractDuration}
+                onValueChange={(value) => setFormData(prev => ({ ...prev, contractDuration: value }))}
+                className="space-y-2"
+              >
+                {contractDurations.map((option) => (
+                  <div
+                    key={option.value}
+                    className={cn(
+                      "flex items-center space-x-3 rounded-lg border px-4 py-3 transition-colors cursor-pointer",
+                      formData.contractDuration === option.value
+                        ? "border-primary bg-primary/10"
+                        : "border-border hover:border-primary/50"
+                    )}
+                    onClick={() => setFormData(prev => ({ ...prev, contractDuration: option.value }))}
+                  >
+                    <RadioGroupItem value={option.value} id={`contract-${option.value}`} />
+                    <Label htmlFor={`contract-${option.value}`} className="cursor-pointer flex-1 text-foreground">
+                      {option.label}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+            </div>
+          )}
+
+          {/* Step: Number of Applicants */}
+          {currentStepName === "applicants" && (
+            <div className="space-y-4">
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
               <RadioGroup
                 value={formData.applicants}
                 onValueChange={(value) => setFormData(prev => ({ ...prev, applicants: value }))}
@@ -303,8 +624,8 @@ export function VisaCalculatorModal({ open, onOpenChange }) {
                     )}
                     onClick={() => setFormData(prev => ({ ...prev, applicants: option.value }))}
                   >
-                    <RadioGroupItem value={option.value} id={option.value} />
-                    <Label htmlFor={option.value} className="cursor-pointer flex-1 text-foreground">
+                    <RadioGroupItem value={option.value} id={`applicants-${option.value}`} />
+                    <Label htmlFor={`applicants-${option.value}`} className="cursor-pointer flex-1 text-foreground">
                       {option.label}
                     </Label>
                   </div>
@@ -313,10 +634,10 @@ export function VisaCalculatorModal({ open, onOpenChange }) {
             </div>
           )}
 
-          {/* Step 4: Additional Services */}
-          {step === 4 && (
+          {/* Step: Additional Services */}
+          {currentStepName === "additional_services" && (
             <div className="space-y-4">
-              <h3 className="font-medium text-foreground">Дополнительные услуги</h3>
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
               <p className="text-sm text-muted-foreground">Выберите нужные услуги (необязательно)</p>
               <div className="space-y-2 max-h-[300px] overflow-y-auto pr-2">
                 {additionalServices.map((service) => (
@@ -344,10 +665,10 @@ export function VisaCalculatorModal({ open, onOpenChange }) {
             </div>
           )}
 
-          {/* Step 5: Contact Info */}
-          {step === 5 && (
+          {/* Step: Contact Info */}
+          {currentStepName === "contact" && (
             <div className="space-y-4">
-              <h3 className="font-medium text-foreground">Ваши контактные данные</h3>
+              <h3 className="font-medium text-foreground">{getStepTitle()}</h3>
               <p className="text-sm text-muted-foreground">
                 Введите ваши данные для получения бесплатной консультации
               </p>
