@@ -24,7 +24,7 @@ export default function Header () {
         <div className="flex md:justify-between items-center border-b border-slate-200 pb-4 mb-4">
           <div className="w-full flex justify-between md:w-min items-center space-x-8">
             <div className="text-xl font-bold text-slate-800">
-              <Link href={"/"}>Visapro</Link>
+              <Link href={"/"}>VISAPRO</Link>
             </div>
 
             <div className="flex items-center space-x-2 text-sm text-slate-500">
@@ -42,7 +42,7 @@ export default function Header () {
               rel="noopener noreferrer"
               className="flex gap-2 items-center"
             >
-              <span className="text-slate-500">WhatsApp</span>
+              <span className="text-black">WhatsApp</span>
               <Image src={"/whatsapp.svg"} alt="" width={36} height={36} />
               <span className="font-semibold">+7 707 367 5161</span>
             </a>
@@ -68,13 +68,13 @@ export default function Header () {
         <nav className="flex justify-between items-center mt-4">
           <div className="flex flex-col lg:flex-row space-y-2 md:space-x-4 lg:space-y-0">
             <Link
-              className="text-slate-800 font-bold hover:text-primary transition"
+              className="text-slate-800 font-bold hover:text-primary transition text-lg"
               href="/"
               >
               Визы из Казахстана
             </Link>
             <Link
-              className="text-slate-800 font-bold hover:text-primary transition"
+              className="text-slate-800 font-bold hover:text-primary transition text-lg"
               href="outsiders"
             >
               Для иностранных граждан
@@ -85,8 +85,9 @@ export default function Header () {
             <VisaCalculatorButton
               title='Бесплатная консультация'
               buttonOptions={{
-                className: "text-primary font-semibold hidden sm:inline-block whitespace-nowrap px-4 py-2",
-                variant: 'outline'
+                className: "text-white z-10 font-semibold hidden sm:inline-block whitespace-nowrap px-4 py-2",
+                // variant: 'outline',
+                size: 'lg'
               }}
             />
           </div>

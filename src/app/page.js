@@ -1,859 +1,3 @@
-// import {
-//   ArrowRight,
-//   BadgeCheck,
-//   BadgeDollarSign,
-//   Banknote,
-//   Briefcase,
-//   Building2,
-//   CreditCard,
-//   Euro,
-//   Globe,
-//   GraduationCap,
-//   Headphones,
-//   HeartPulse,
-//   Home as HomeIcon,
-//   Hotel,
-//   Landmark,
-//   Laptop,
-//   Monitor,
-//   Plane,
-//   PlaneTakeoff,
-//   ShieldCheck,
-//   Stethoscope,
-//   TrendingUp,
-//   Users,
-//   UsersRound,
-// } from "lucide-react";
-// import Image from "next/image";
-// import Link from "next/link";
-
-// export default function Home() {
-//   return (
-//     <div className="relative max-w-7xl mx-auto px-4">
-//       <main className="py-8">
-//         {/* <section className="overflow-hidden relative">
-//           <div className="relative z-10 max-w-7xl mx-auto ">
-//             <h2 className="text-3xl font-bold tracking-tight mb-6">
-//               Визы из Казахстана
-//             </h2>
-//             <div className="grid lg:grid-cols-12 gap-6">
-//               <div className="lg:col-span-5 flex flex-col justify-center">
-//                 <div className="bg-white rounded-2xl p-6 border border-slate-200">
-//                   <h4 className="font-bold text-lg mb-3">Виды виз</h4>
-//                   <ul className="grid grid-cols-1 sm:grid-cols-1 gap-x-6 gap-y-5 text-sm font-medium">
-//                     <li>
-//                       <div className="flex items-center gap-2">
-//                         <BadgeDollarSign
-//                           className="text-primary shrink-0"
-//                           size={16}
-//                         />
-//                         <span>Дипломатические и служебные визы</span>
-//                       </div>
-//                     </li>
-//                     <li>
-//                       <div className="flex items-center gap-2">
-//                         <TrendingUp
-//                           className="text-primary shrink-0"
-//                           size={16}
-//                         />
-//                         <span>Инвестиционные визы</span>
-//                       </div>
-//                     </li>
-//                     <li>
-//                       <div className="flex items-center gap-2">
-//                         <Briefcase
-//                           className="text-primary shrink-0"
-//                           size={16}
-//                         />
-//                         <span>Бизнес-визы</span>
-//                       </div>
-//                     </li>
-//                     <li>
-//                       <div className="flex items-center gap-2">
-//                         <Plane className="text-primary shrink-0" size={16} />
-//                         <span>Туристические визы</span>
-//                       </div>
-//                     </li>
-//                     <li>
-//                       <div className="flex items-center gap-2">
-//                         <Stethoscope
-//                           className="text-primary shrink-0"
-//                           size={16}
-//                         />
-//                         <span>
-//                           Визы на лечение, частные и иные краткосрочные цели
-//                         </span>
-//                       </div>
-//                     </li>
-//                     <li>
-//                       <div className="flex items-center gap-2">
-//                         <GraduationCap
-//                           className="text-primary shrink-0"
-//                           size={16}
-//                         />
-//                         <span>Студенческие и учебные визы</span>
-//                       </div>
-//                     </li>
-//                     <li>
-//                       <div className="flex items-center gap-2">
-//                         <BadgeDollarSign
-//                           className="text-primary shrink-0"
-//                           size={16}
-//                         />
-//                         <span>Рабочие визы</span>
-//                       </div>
-//                     </li>
-//                     <li>
-//                       <div className="flex items-center gap-2">
-//                         <Users className="text-primary shrink-0" size={16} />
-//                         <span>Визы на воссоединение семьи</span>
-//                       </div>
-//                     </li>
-//                     <li>
-//                       <div className="flex items-center gap-2">
-//                         <HomeIcon className="text-primary shrink-0" size={16} />
-//                         <span>Визы для ПМЖ</span>
-//                       </div>
-//                     </li>
-//                   </ul>
-//                 </div>
-//                 <div className="mt-6 block lg:hidden">
-//                   <div className="relative rounded-2xl overflow-hidden min-h-[220px] bg-white">
-//                     <Image
-//                       alt="World Map"
-//                       className="w-full h-full object-cover"
-//                       src={"/visa-from-kz.jpeg"}
-//                       data-alt="Stylized world map showing global travel routes"
-//                       fill
-//                       style={{ objectFit: "cover" }}
-//                       priority
-//                     />
-//                     <div className="absolute inset-0 to-transparent flex flex-col justify-end p-8 text-white bg-gradient-to-t from-black/50 via-transparent">
-//                       <h3 className="text-2xl font-bold mb-2">
-//                         Весь мир открыт
-//                       </h3>
-//                       <p className="text-sm opacity-90">
-//                         Профессиональная помощь в получении виз в любую страну
-//                         мира!
-//                       </p>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="lg:col-span-7 relative hidden lg:block min-h-[400px] rounded-3xl overflow-hidden">
-//                 <Image
-//                   alt="World Map"
-//                   className="w-full h-full object-cover"
-//                   src={"/visa-from-kz.jpeg"}
-//                   data-alt="Stylized world map showing global travel routes"
-//                   fill
-//                   sizes="(max-width:1024px) 100vw, 756px"
-//                   style={{ objectFit: "cover" }}
-//                   priority
-//                 />
-//                 <div className="absolute inset-0 to-transparent flex flex-col justify-end p-8 text-white bg-gradient-to-t from-black/40 via-transparent">
-//                   <h3 className="text-2xl font-bold mb-2">Весь мир открыт</h3>
-//                   <p className="text-sm opacity-90">
-//                     Профессиональная помощь в получении виз в любую страну мира!
-//                   </p>
-//                 </div>
-//               </div>
-//             </div>
-//             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
-//               <div className="space-y-4 bg-white rounded-2xl p-6 border border-slate-200">
-//                 <div className="flex items-center gap-3 pb-2 border-b border-primary/20">
-//                   <Euro className="text-primary shrink-0" size={20} />
-//                   <h4 className="font-bold">Европа</h4>
-//                 </div>
-//                 <ul className="space-y-2 text-sm">
-//                   <li className="flex items-center gap-2">Германия</li>
-//                   <li className="flex items-center gap-2">Франция</li>
-//                   <li className="flex items-center gap-2">Испания</li>
-//                   <li className="flex items-center gap-2">Италия</li>
-//                   <li className="flex items-center gap-2">Англия</li>
-//                 </ul>
-//               </div>
-//               <div className="space-y-4 bg-white rounded-2xl p-6 border border-slate-200">
-//                 <div className="flex items-center gap-3 pb-2 border-b border-primary/20">
-//                   <Landmark className="text-primary shrink-0" size={20} />
-//                   <h4 className="font-bold">Азия</h4>
-//                 </div>
-//                 <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-//                   <li>Вьетнам</li>
-//                   <li>Индонезия</li>
-//                   <li>Камбоджа</li>
-//                   <li>Лаос</li>
-//                   <li>Малайзия</li>
-//                   <li>Сингапур</li>
-//                   <li>Таиланд</li>
-//                   <li>Филиппины</li>
-//                 </ul>
-//               </div>
-//               <div className="space-y-4 bg-white rounded-2xl p-6 border border-slate-200">
-//                 <div className="flex items-center gap-3 pb-2 border-b border-primary/20">
-//                   <Building2 className="text-primary shrink-0" size={20} />
-//                   <h4 className="font-bold">Юго-Восточная Азия</h4>
-//                 </div>
-//                 <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-//                   <li>Китай</li>
-//                   <li>Япония</li>
-//                   <li>Афганистан</li>
-//                   <li>Бангладеш</li>
-//                   <li>Индия</li>
-//                   <li>Мальдивы</li>
-//                   <li>Пакистан</li>
-//                   <li>Шри-Ланка</li>
-//                 </ul>
-//               </div>
-//               <div className="space-y-4 bg-white rounded-2xl p-6 border border-slate-200">
-//                 <div className="flex items-center gap-3 pb-2 border-b border-primary/20">
-//                   <Globe className="text-primary shrink-0" size={20} />
-//                   <h4 className="font-bold">Южная Америка (США/Канада)</h4>
-//                 </div>
-//                 <ul className="space-y-2 text-sm">
-//                   <li>США</li>
-//                   <li>Канада</li>
-//                   <li>Австралия</li>
-//                 </ul>
-//               </div>
-//             </div>
-//           </div>
-//         </section> */}
-
-//         <section className="overflow-hidden relative py-10">
-//           <div className="relative z-10 max-w-7xl mx-auto">
-//             {/* Header */}
-//             <p className="text-xs font-semibold uppercase tracking-widest text-[#dca7f2] mb-1">
-//               Визовые услуги
-//             </p>
-//             <h2
-//               className="font-bold tracking-tight mb-1"
-//               style={{
-//                 fontFamily: "'Playfair Display', serif",
-//                 fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
-//                 lineHeight: 1.1,
-//                 background:
-//                   "linear-gradient(135deg, #dca7f2 0%, #a855f7 40%, #7c3aed 80%)",
-//                 WebkitBackgroundClip: "text",
-//                 WebkitTextFillColor: "transparent",
-//                 backgroundClip: "text",
-//               }}
-//             >
-//               Визы из Казахстана
-//             </h2>
-//             <p className="text-slate-500 text-sm mb-8">
-//               Профессиональная помощь в получении виз в любую страну мира
-//             </p>
-
-//             <div className="grid lg:grid-cols-12 gap-5">
-//               {/* Left: Visa types */}
-//               <div className="lg:col-span-5 flex flex-col justify-center">
-//                 <div
-//                   className="bg-white rounded-2xl p-6 border relative overflow-hidden"
-//                   style={{ borderColor: "rgba(220,167,242,0.3)" }}
-//                 >
-//                   {/* Gradient top bar */}
-//                   <div
-//                     className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl"
-//                     style={{
-//                       background:
-//                         "linear-gradient(90deg, #dca7f2, #a855f7, #7c3aed)",
-//                     }}
-//                   />
-//                   <h4
-//                     className="font-bold text-lg mb-4"
-//                     style={{
-//                       background: "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                       WebkitBackgroundClip: "text",
-//                       WebkitTextFillColor: "transparent",
-//                       backgroundClip: "text",
-//                     }}
-//                   >
-//                     Виды виз
-//                   </h4>
-//                   <ul className="flex flex-col gap-2 text-sm">
-//                     <li className="flex items-center gap-2 px-2 py-1.5 rounded-xl hover:bg-purple-50 transition-colors">
-//                       <span
-//                         className="w-2 h-2 rounded-full shrink-0"
-//                         style={{
-//                           background:
-//                             "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                         }}
-//                       />
-//                       Дипломатические и служебные визы
-//                     </li>
-//                     <li className="flex items-center gap-2 px-2 py-1.5 rounded-xl hover:bg-purple-50 transition-colors">
-//                       <span
-//                         className="w-2 h-2 rounded-full shrink-0"
-//                         style={{
-//                           background:
-//                             "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                         }}
-//                       />
-//                       Инвестиционные визы
-//                     </li>
-//                     <li className="flex items-center gap-2 px-2 py-1.5 rounded-xl hover:bg-purple-50 transition-colors">
-//                       <span
-//                         className="w-2 h-2 rounded-full shrink-0"
-//                         style={{
-//                           background:
-//                             "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                         }}
-//                       />
-//                       Бизнес-визы
-//                     </li>
-//                     <li className="flex items-center gap-2 px-2 py-1.5 rounded-xl hover:bg-purple-50 transition-colors">
-//                       <span
-//                         className="w-2 h-2 rounded-full shrink-0"
-//                         style={{
-//                           background:
-//                             "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                         }}
-//                       />
-//                       Туристические визы
-//                     </li>
-//                     <li className="flex items-center gap-2 px-2 py-1.5 rounded-xl hover:bg-purple-50 transition-colors">
-//                       <span
-//                         className="w-2 h-2 rounded-full shrink-0"
-//                         style={{
-//                           background:
-//                             "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                         }}
-//                       />
-//                       Визы на лечение и частные цели
-//                     </li>
-//                     <li className="flex items-center gap-2 px-2 py-1.5 rounded-xl hover:bg-purple-50 transition-colors">
-//                       <span
-//                         className="w-2 h-2 rounded-full shrink-0"
-//                         style={{
-//                           background:
-//                             "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                         }}
-//                       />
-//                       Студенческие и учебные визы
-//                     </li>
-//                     <li className="flex items-center gap-2 px-2 py-1.5 rounded-xl hover:bg-purple-50 transition-colors">
-//                       <span
-//                         className="w-2 h-2 rounded-full shrink-0"
-//                         style={{
-//                           background:
-//                             "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                         }}
-//                       />
-//                       Рабочие визы
-//                     </li>
-//                     <li className="flex items-center gap-2 px-2 py-1.5 rounded-xl hover:bg-purple-50 transition-colors">
-//                       <span
-//                         className="w-2 h-2 rounded-full shrink-0"
-//                         style={{
-//                           background:
-//                             "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                         }}
-//                       />
-//                       Визы на воссоединение семьи
-//                     </li>
-//                     <li className="flex items-center gap-2 px-2 py-1.5 rounded-xl hover:bg-purple-50 transition-colors">
-//                       <span
-//                         className="w-2 h-2 rounded-full shrink-0"
-//                         style={{
-//                           background:
-//                             "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                         }}
-//                       />
-//                       Визы для ПМЖ
-//                     </li>
-//                   </ul>
-//                 </div>
-//               </div>
-
-//               {/* Right: Decorative photo panel */}
-//               <div
-//                 className="lg:col-span-7 relative hidden lg:flex flex-col justify-between min-h-[380px] rounded-3xl overflow-hidden p-6"
-//                 // style={{
-//                 //   background:
-//                 //     "linear-gradient(135deg, #1a0a2e 0%, #2d1354 40%, #4a1a72 70%, #6b2fa0 100%)",
-//                 // }}
-//               >
-//                 <Image
-//                   alt="World Map"
-//                   className="w-full h-full object-cover "
-//                   src="/visa-from-kz.jpeg"
-//                   fill
-//                   sizes="756px"
-//                   style={{ objectFit: "cover" }}
-//                   priority
-//                 />
-//                 <span
-//                   className="relative z-10 self-start text-xs font-medium px-4 py-1.5 rounded-full"
-//                   style={{
-//                     background: "rgba(220,167,242,0.15)",
-//                     border: "0.5px solid rgba(220,167,242,0.4)",
-//                     color: "#dca7f2",
-//                     letterSpacing: "0.05em",
-//                   }}
-//                 >
-//                   🌐 Весь мир открыт
-//                 </span>
-//                 <div className="relative z-10">
-//                   <h3
-//                     className="font-bold mb-1"
-//                     style={{
-//                       fontFamily: "'Playfair Display', serif",
-//                       fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
-//                       color: "#f5e6ff",
-//                       lineHeight: 1.2,
-//                     }}
-//                   >
-//                     Откройте мир
-//                     <br />
-//                     вместе с нами
-//                   </h3>
-//                   <p
-//                     className="text-sm"
-//                     style={{ color: "rgba(245,230,255,0.7)", maxWidth: 280 }}
-//                   >
-//                     Профессиональная помощь в получении виз в любую страну мира
-//                   </p>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Countries grid */}
-//             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-//               {/* Европа */}
-//               <div
-//                 className="bg-white rounded-2xl p-5 border transition-colors hover:border-[#dca7f2]/50"
-//                 style={{ borderColor: "rgba(220,167,242,0.2)" }}
-//               >
-//                 <div
-//                   className="flex items-center gap-2 pb-2 mb-3"
-//                   style={{ borderBottom: "1px solid rgba(220,167,242,0.15)" }}
-//                 >
-//                   <div
-//                     className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
-//                     style={{
-//                       background:
-//                         "linear-gradient(135deg, rgba(220,167,242,0.2), rgba(168,85,247,0.15))",
-//                     }}
-//                   >
-//                     <Euro className="text-[#dca7f2]" size={14} />
-//                   </div>
-//                   <h4
-//                     className="font-semibold text-sm"
-//                     style={{
-//                       background: "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                       WebkitBackgroundClip: "text",
-//                       WebkitTextFillColor: "transparent",
-//                       backgroundClip: "text",
-//                     }}
-//                   >
-//                     Европа
-//                   </h4>
-//                 </div>
-//                 <ul className="flex flex-col gap-1 text-sm text-slate-500">
-//                   <li>Германия</li>
-//                   <li>Франция</li>
-//                   <li>Испания</li>
-//                   <li>Италия</li>
-//                   <li>Англия</li>
-//                 </ul>
-//               </div>
-
-//               {/* Азия */}
-//               <div
-//                 className="bg-white rounded-2xl p-5 border transition-colors hover:border-[#dca7f2]/50"
-//                 style={{ borderColor: "rgba(220,167,242,0.2)" }}
-//               >
-//                 <div
-//                   className="flex items-center gap-2 pb-2 mb-3"
-//                   style={{ borderBottom: "1px solid rgba(220,167,242,0.15)" }}
-//                 >
-//                   <div
-//                     className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
-//                     style={{
-//                       background:
-//                         "linear-gradient(135deg, rgba(220,167,242,0.2), rgba(168,85,247,0.15))",
-//                     }}
-//                   >
-//                     <Landmark className="text-[#dca7f2]" size={14} />
-//                   </div>
-//                   <h4
-//                     className="font-semibold text-sm"
-//                     style={{
-//                       background: "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                       WebkitBackgroundClip: "text",
-//                       WebkitTextFillColor: "transparent",
-//                       backgroundClip: "text",
-//                     }}
-//                   >
-//                     Азия
-//                   </h4>
-//                 </div>
-//                 <ul className="grid grid-cols-2 gap-x-3 gap-y-1 text-sm text-slate-500">
-//                   <li>Вьетнам</li>
-//                   <li>Индонезия</li>
-//                   <li>Камбоджа</li>
-//                   <li>Лаос</li>
-//                   <li>Малайзия</li>
-//                   <li>Сингапур</li>
-//                   <li>Таиланд</li>
-//                   <li>Филиппины</li>
-//                 </ul>
-//               </div>
-
-//               {/* Юго-Восточная Азия */}
-//               <div
-//                 className="bg-white rounded-2xl p-5 border transition-colors hover:border-[#dca7f2]/50"
-//                 style={{ borderColor: "rgba(220,167,242,0.2)" }}
-//               >
-//                 <div
-//                   className="flex items-center gap-2 pb-2 mb-3"
-//                   style={{ borderBottom: "1px solid rgba(220,167,242,0.15)" }}
-//                 >
-//                   <div
-//                     className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
-//                     style={{
-//                       background:
-//                         "linear-gradient(135deg, rgba(220,167,242,0.2), rgba(168,85,247,0.15))",
-//                     }}
-//                   >
-//                     <Building2 className="text-[#dca7f2]" size={14} />
-//                   </div>
-//                   <h4
-//                     className="font-semibold text-sm"
-//                     style={{
-//                       background: "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                       WebkitBackgroundClip: "text",
-//                       WebkitTextFillColor: "transparent",
-//                       backgroundClip: "text",
-//                     }}
-//                   >
-//                     Юго-Восточная Азия
-//                   </h4>
-//                 </div>
-//                 <ul className="grid grid-cols-2 gap-x-3 gap-y-1 text-sm text-slate-500">
-//                   <li>Китай</li>
-//                   <li>Япония</li>
-//                   <li>Афганистан</li>
-//                   <li>Бангладеш</li>
-//                   <li>Индия</li>
-//                   <li>Мальдивы</li>
-//                   <li>Пакистан</li>
-//                   <li>Шри-Ланка</li>
-//                 </ul>
-//               </div>
-
-//               {/* Южная Америка (США/Канада) */}
-//               <div
-//                 className="bg-white rounded-2xl p-5 border transition-colors hover:border-[#dca7f2]/50"
-//                 style={{ borderColor: "rgba(220,167,242,0.2)" }}
-//               >
-//                 <div
-//                   className="flex items-center gap-2 pb-2 mb-3"
-//                   style={{ borderBottom: "1px solid rgba(220,167,242,0.15)" }}
-//                 >
-//                   <div
-//                     className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
-//                     style={{
-//                       background:
-//                         "linear-gradient(135deg, rgba(220,167,242,0.2), rgba(168,85,247,0.15))",
-//                     }}
-//                   >
-//                     <Globe className="text-[#dca7f2]" size={14} />
-//                   </div>
-//                   <h4
-//                     className="font-semibold text-sm"
-//                     style={{
-//                       background: "linear-gradient(135deg, #dca7f2, #a855f7)",
-//                       WebkitBackgroundClip: "text",
-//                       WebkitTextFillColor: "transparent",
-//                       backgroundClip: "text",
-//                     }}
-//                   >
-//                     Южная Америка (США/Канада)
-//                   </h4>
-//                 </div>
-//                 <ul className="flex flex-col gap-1 text-sm text-slate-500">
-//                   <li>США</li>
-//                   <li>Канада</li>
-//                   <li>Австралия</li>
-//                 </ul>
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-
-//         {/* <div className="pt-10">
-//           <BidForm />
-//         </div> */}
-
-//         <section className="pt-10">
-//           <div className="max-w-7xl mx-auto">
-//             <h2 className="text-3xl font-bold tracking-tight mb-6">
-//               Дополнительные услуги
-//             </h2>
-//             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-//               <div className="bg-white  p-8 rounded-2xl border border-slate-200 hover:-translate-y-1 transition-all">
-//                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
-//                   <HeartPulse size={28} />
-//                 </div>
-//                 <h3 className="text-xl font-bold mb-3">Страхование</h3>
-//                 <p className="text-slate-500 text-sm leading-relaxed mb-6">
-//                   Оформление медицинских страховых полисов для выезда за рубеж и
-//                   пребывания в РК в соответствии с международными стандартами.
-//                 </p>
-//               </div>
-//               <div className="bg-white  p-8 rounded-2xl border border-slate-200 hover:-translate-y-1 transition-all">
-//                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
-//                   <BadgeCheck size={28} />
-//                 </div>
-//                 <h3 className="text-xl font-bold mb-3">Работа за рубежом</h3>
-//                 <p className="text-slate-500 text-sm leading-relaxed mb-6">
-//                   Помощь в поиске легального трудоустройства в странах Европы,
-//                   Азии и Америки. Полное документальное сопровождение.
-//                 </p>
-//               </div>
-//               <div className="bg-white  p-8 rounded-2xl border border-slate-200 hover:-translate-y-1 transition-all">
-//                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
-//                   <Headphones size={28} />
-//                 </div>
-//                 <h3 className="text-xl font-bold mb-3">Вызов специалиста</h3>
-//                 <p className="text-slate-500 text-sm leading-relaxed mb-6">
-//                   Консультация нашего эксперта с выездом в ваш офис или на дом
-//                   для сбора документов и заполнения анкет.
-//                 </p>
-//               </div>
-//               <div className="bg-white  p-8 rounded-2xl border border-slate-200 hover:-translate-y-1 transition-all">
-//                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
-//                   <ShieldCheck size={28} />
-//                 </div>
-//                 <h3 className="text-xl font-bold mb-3">Проверка документов</h3>
-//                 <p className="text-slate-500 text-sm leading-relaxed mb-6">
-//                   Профессиональный аудит вашего пакета документов для исключения
-//                   рисков отказа в получении визы или РВП.
-//                 </p>
-//               </div>
-//               <div className="bg-white  p-8 rounded-2xl border border-slate-200 hover:-translate-y-1 transition-all">
-//                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
-//                   <UsersRound size={28} />
-//                 </div>
-//                 <h3 className="text-xl font-bold mb-3">
-//                   Услуги для граждан РФ
-//                 </h3>
-//                 <p className="text-slate-500 text-sm leading-relaxed mb-6">
-//                   Специализированная помощь в получении ИИН, открытии банковских
-//                   карт и оформлении ВНЖ для граждан Российской Федерации.
-//                 </p>
-//               </div>
-//               <div className="bg-white  p-8 rounded-2xl border border-slate-200 hover:-translate-y-1 transition-all">
-//                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
-//                   <Hotel size={28} />
-//                 </div>
-//                 <h3 className="text-xl font-bold mb-3">Бронирование отелей</h3>
-//                 <p className="text-slate-500 text-sm leading-relaxed mb-6">
-//                   Подбор и бронирование отелей и курортных баз по всему миру по
-//                   эксклюзивным корпоративным ценам.
-//                 </p>
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-
-//         <div className="pt-10">
-//           <BidForm />
-//         </div>
-
-//         <section className="pt-10" id="why-us">
-//           <div className="flex flex-col md:flex-row gap-12 items-center">
-//             <div className="bg-primary rounded-lg flex items-center justify-center h-min p-6">
-//               <h2 className="text-3xl font-bold text-center text-white whitespace-nowrap">
-//                 Почему мы?
-//               </h2>
-//             </div>
-//             <div className="lg:col-span-2 grid md:grid-cols-2 gap-8">
-//               <div className="flex border border-slate-200 rounded-2xl p-4 bg-white">
-//                 <Brain className="text-primary text-3xl mr-4 h-8 w-8" />
-//                 <div>
-//                   <h3 className="font-bold text-lg text-slate-800">
-//                     Глубокая экспертиза
-//                   </h3>
-//                   <p className="mt-1 text-sm text-slate-600">
-//                     Мы специализируемся исключительно на миграционном
-//                     законодательстве Казахстана.
-//                   </p>
-//                 </div>
-//               </div>
-//               <div className="flex border border-slate-200 rounded-2xl p-4 bg-white">
-//                 <History className="text-primary text-3xl mr-4 h-8 w-8" />
-//                 <div>
-//                   <h3 className="font-bold text-lg text-slate-800">
-//                     10+ лет опыта
-//                   </h3>
-//                   <p className="mt-1 text-sm text-slate-600">
-//                     С 2014 года мы помогли более 12 000 иностранным гражданам.
-//                   </p>
-//                 </div>
-//               </div>
-//               <div className="flex border border-slate-200 rounded-2xl p-4 bg-white">
-//                 <CheckCircle className="text-primary text-3xl mr-4 h-8 w-8" />
-//                 <div>
-//                   <h3 className="font-bold text-lg text-slate-800">
-//                     Гарантированный результат
-//                   </h3>
-//                   <p className="mt-1 text-sm text-slate-600">
-//                     Заключаем официальный договор и берем на себя полную
-//                     ответственность.
-//                   </p>
-//                 </div>
-//               </div>
-//               <div className="flex border border-slate-200 rounded-2xl p-4 bg-white">
-//                 <Eye className="text-primary text-3xl mr-4 h-8 w-8" />
-//                 <div>
-//                   <h3 className="font-bold text-lg text-slate-800">
-//                     Прозрачные условия
-//                   </h3>
-//                   <p className="mt-1 text-sm text-slate-600">
-//                     Стоимость услуг фиксируется в договоре с самого начала.
-//                   </p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-
-//         <div className="py-10 lg:py-16">
-//           <PaymentVariants />
-//         </div>
-
-//         <section className="py-10">
-//           <div className="max-w-7xl mx-auto">
-//             <div className="flex mb-6">
-//               <h2 className="text-3xl font-bold tracking-tight">Вопросы</h2>
-//             </div>
-//             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//               <div className="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-4">
-//                 <div className="aspect-video rounded-2xl overflow-hidden mb-6 soft-shadow relative shadow">
-//                   <Image
-//                     alt="Legal Documents"
-//                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-//                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmYOf_hW1pOQ-GdqE4Hue0hTpVJIeYNNF-9pSDwS4PYlIvVOdJmg4ux31OXFcCJjvUOSC90XMPgfchtZhVR4wL16CDkNpUyuw-FA1nlwJCoe15Ek9t34KGv6UhFJYvJd8TOYKKEu99JAMshcxHz4GUAB7NbaroGJ31HSVqYtEWYNYZK-Bee_ZQTmMzY4XHiKvdoJa1YA7VpzbR6HjSvl_0hImV-ZN1SeV0l2-eI8zzcb2I_Z4p0d73MbtvKYyX_2ib8RGR46JNSQc"
-//                     data-alt="Stack of legal migration documents on a desk"
-//                     fill
-//                     sizes="(max-width:1024px) 100vw, 384px"
-//                     style={{ objectFit: "cover" }}
-//                     priority
-//                   />
-//                   <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">
-//                     Гайд
-//                   </div>
-//                 </div>
-//                 <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-//                   Как получить ВНЖ в Казахстане в 2026 году?
-//                 </h3>
-//                 <p className="text-slate-500 text-sm line-clamp-3 mb-4">
-//                   Подробная инструкция по сбору документов, срокам рассмотрения
-//                   и основным требованиям для получения вида на жительство...
-//                 </p>
-//                 <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
-//                   12 Октября 2026
-//                 </span>
-//               </div>
-//               <div className="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-4">
-//                 <div className="aspect-video rounded-2xl overflow-hidden mb-6 soft-shadow relative shadow">
-//                   <Image
-//                     alt="Meeting"
-//                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-//                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC8QF-dedHBSPL-QG5238jDF-6frXS5LdTOBaesD08gjVXWIY-mDiu_tTCZJMaSHWPLCXnZAouFLF_TZ1ZEfeTTAOCIxDh5cMa9IuaHnpbhR80ZHEVMMmunBOd_Ym5I2nHhMYKkjzNNKW1FXHdDzj45eRD_wWLlL0zLpSgEu7OovQS-8AK0gZmHFAthI8ql0Zm3-YLv-V3pEpihE9eIEjH17srx__7w5g3oVzcU_Ab8V-vcpd0HZ9CknpoDXEHjrfO8riU4xSH6-o"
-//                     data-alt="Business professionals in a corporate meeting setting"
-//                     fill
-//                     sizes="(max-width:1024px) 100vw, 384px"
-//                     style={{ objectFit: "cover" }}
-//                     priority
-//                   />
-//                   <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">
-//                     Бизнес
-//                   </div>
-//                 </div>
-//                 <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-//                   Digital Nomad Visa: Новые возможности для IT
-//                 </h3>
-//                 <p className="text-slate-500 text-sm line-clamp-3 mb-4">
-//                   Казахстан запустил программу для цифровых кочевников.
-//                   Разбираемся, кто может претендовать и какие льготы это дает...
-//                 </p>
-//                 <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
-//                   05 Октября 2026
-//                 </span>
-//               </div>
-//               <div className="group cursor-pointer bg-white rounded-2xl border border-slate-200 p-4">
-//                 <div className="aspect-video rounded-2xl overflow-hidden mb-6 soft-shadow relative shadow">
-//                   <Image
-//                     alt="Law"
-//                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-//                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAE8JWIqZxdXbN47Jxtwla685FfeS2LhXQT1qyh9leH4msvAFnAlh0mE_spieXkzZH1ShFnjgpQF8-N0L1HsJkxeu5aZku3yT87wexyhKR_MtdSN4Med6fbS8g5FZ7n_moZ1obfQDvIDEXlEf8P13kbKHw5mN1LemXM77DBD_AecKW9R6XHDhSflZWhmMEPyxfk6qtND0SRVkjdJWsGLk0-eHx8_DUS0ddMfJYLx26taLWyA0Qv2EPFoNQh3k2PpGDj9HKfTF0BIE"
-//                     data-alt="Gavel and law books representing legal services"
-//                     fill
-//                     sizes="(max-width:1024px) 100vw, 384px"
-//                     style={{ objectFit: "cover" }}
-//                     priority
-//                   />
-//                   <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">
-//                     Законодательство
-//                   </div>
-//                 </div>
-//                 <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-//                   Изменения в миграционном учете
-//                 </h3>
-//                 <p className="text-slate-500 text-sm line-clamp-3 mb-4">
-//                   Важные поправки в законодательстве РК, которые вступают в силу
-//                   с начала следующего месяца. О чем нужно знать иностранцам...
-//                 </p>
-//                 <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
-//                   28 Сентября 2026
-//                 </span>
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-//       </main>
-//     </div>
-//   );
-// }
-
-// import {
-//   Phone,
-//   Mail,
-//   MessageCircle,
-//   Brain,
-//   History,
-//   CheckCircle,
-//   Eye,
-// } from "lucide-react";
-// import BidForm from "@/components/bid-form";
-// import PaymentVariants from "@/components/payment-variants";
-
-// // Custom icons that are similar to WhatsApp/Telegram
-// function SendPlaneIcon({ className }) {
-//   // Lucide's Send (plane/paper) icon as SVG
-//   return (
-//     <svg
-//       className={className}
-//       height="1em"
-//       width="1em"
-//       stroke="currentColor"
-//       fill="none"
-//       strokeWidth={2}
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//       viewBox="0 0 24 24"
-//     >
-//       <path d="M22 2L11 13"></path>
-//       <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
-//     </svg>
-//   );
-// }
-
-
 "use client";
 
 import {
@@ -886,10 +30,17 @@ const gradStyle = {
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
 };
-const accentBar       = { background: "linear-gradient(90deg, #dca7f2, #a855f7, #7c3aed)" };
-const iconBg          = { background: "linear-gradient(135deg, rgba(220,167,242,0.18), rgba(168,85,247,0.12))" };
-const cardShadow      = "0 2px 16px rgba(168,85,247,0.08), 0 1px 3px rgba(0,0,0,0.06)";
-const cardShadowHover = "0 8px 32px rgba(168,85,247,0.16), 0 2px 8px rgba(0,0,0,0.08)";
+const accentBar = {
+  background: "linear-gradient(90deg, #dca7f2, #a855f7, #7c3aed)",
+};
+const iconBg = {
+  background:
+    "linear-gradient(135deg, rgba(220,167,242,0.18), rgba(168,85,247,0.12))",
+};
+const cardShadow =
+  "0 2px 16px rgba(168,85,247,0.08), 0 1px 3px rgba(0,0,0,0.06)";
+const cardShadowHover =
+  "0 8px 32px rgba(168,85,247,0.16), 0 2px 8px rgba(0,0,0,0.08)";
 
 /* ══════════════════════════════════════════════════════════════════
    FULL-PAGE DIAGONAL BACKGROUND
@@ -919,79 +70,124 @@ function PageDiagBg({ bands = 7 }) {
       }}
     >
       {/* The actual tall column that holds all bands */}
-      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: `${bands * 100}vh` }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: `${bands * 100}vh`,
+        }}
+      >
         {Array.from({ length: bands }).map((_, i) => {
           const R = i % 2 === 0; // even = right, odd = left
           const edge = R ? "right" : "left";
-          const deg  = R ? "-8deg" : "8deg";
+          const deg = R ? "-8deg" : "8deg";
           const gDir = R ? "155deg" : "205deg";
-          const top  = `${i * 100}vh`;
+          const top = `${i * 100}vh`;
 
           return (
-            <div key={i} style={{ position: "absolute", top, left: 0, width: "100%", height: "100vh", overflow: "hidden" }}>
-              {/* wide outer wash */}
-              <div style={{
+            <div
+              key={i}
+              style={{
                 position: "absolute",
-                top: "-40%", [edge]: "-6%",
-                width: "58%", height: "180%",
-                background: `linear-gradient(${gDir}, rgba(220,167,242,.11) 0%, rgba(168,85,247,.07) 55%, transparent 85%)`,
-                transform: `rotate(${deg})`,
-                transformOrigin: R ? "top right" : "top left",
-                borderRadius: "64px",
-              }} />
+                top,
+                left: 0,
+                width: "100%",
+                height: "100vh",
+                overflow: "hidden",
+              }}
+            >
+              {/* wide outer wash */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: "-40%",
+                  [edge]: "-6%",
+                  width: "58%",
+                  height: "180%",
+                  background: `linear-gradient(${gDir}, rgba(220,167,242,.11) 0%, rgba(168,85,247,.07) 55%, transparent 85%)`,
+                  transform: `rotate(${deg})`,
+                  transformOrigin: R ? "top right" : "top left",
+                  borderRadius: "64px",
+                }}
+              />
 
               {/* mid bordered slab */}
-              <div style={{
-                position: "absolute",
-                top: "-30%", [edge]: "4%",
-                width: "40%", height: "160%",
-                background: `linear-gradient(${gDir}, rgba(220,167,242,.15) 0%, rgba(168,85,247,.09) 55%, transparent 90%)`,
-                transform: `rotate(${deg})`,
-                transformOrigin: R ? "top right" : "top left",
-                borderRadius: "44px",
-                border: "1px solid rgba(220,167,242,.14)",
-              }} />
+              <div
+                style={{
+                  position: "absolute",
+                  top: "-30%",
+                  [edge]: "4%",
+                  width: "40%",
+                  height: "160%",
+                  background: `linear-gradient(${gDir}, rgba(220,167,242,.15) 0%, rgba(168,85,247,.09) 55%, transparent 90%)`,
+                  transform: `rotate(${deg})`,
+                  transformOrigin: R ? "top right" : "top left",
+                  borderRadius: "44px",
+                  border: "1px solid rgba(220,167,242,.14)",
+                }}
+              />
 
               {/* inner tight slab */}
-              <div style={{
-                position: "absolute",
-                top: "-20%", [edge]: "15%",
-                width: "24%", height: "140%",
-                background: `linear-gradient(${gDir}, rgba(220,167,242,.19) 0%, rgba(168,85,247,.11) 50%, transparent 85%)`,
-                transform: `rotate(${deg})`,
-                transformOrigin: R ? "top right" : "top left",
-                borderRadius: "28px",
-                border: "1px solid rgba(220,167,242,.19)",
-              }} />
+              <div
+                style={{
+                  position: "absolute",
+                  top: "-20%",
+                  [edge]: "15%",
+                  width: "24%",
+                  height: "140%",
+                  background: `linear-gradient(${gDir}, rgba(220,167,242,.19) 0%, rgba(168,85,247,.11) 50%, transparent 85%)`,
+                  transform: `rotate(${deg})`,
+                  transformOrigin: R ? "top right" : "top left",
+                  borderRadius: "28px",
+                  border: "1px solid rgba(220,167,242,.19)",
+                }}
+              />
 
               {/* primary accent line */}
-              <div style={{
-                position: "absolute",
-                top: "-20%", [edge]: "33%",
-                width: "2px", height: "140%",
-                background: "linear-gradient(180deg, transparent 0%, rgba(220,167,242,.5) 20%, rgba(168,85,247,.38) 80%, transparent 100%)",
-                transform: `rotate(${deg})`,
-                transformOrigin: R ? "top right" : "top left",
-              }} />
+              <div
+                style={{
+                  position: "absolute",
+                  top: "-20%",
+                  [edge]: "33%",
+                  width: "2px",
+                  height: "140%",
+                  background:
+                    "linear-gradient(180deg, transparent 0%, rgba(220,167,242,.5) 20%, rgba(168,85,247,.38) 80%, transparent 100%)",
+                  transform: `rotate(${deg})`,
+                  transformOrigin: R ? "top right" : "top left",
+                }}
+              />
 
               {/* secondary faint line */}
-              <div style={{
-                position: "absolute",
-                top: "-20%", [edge]: "26%",
-                width: "1px", height: "140%",
-                background: "linear-gradient(180deg, transparent 0%, rgba(220,167,242,.2) 40%, transparent 100%)",
-                transform: `rotate(${deg})`,
-                transformOrigin: R ? "top right" : "top left",
-              }} />
+              <div
+                style={{
+                  position: "absolute",
+                  top: "-20%",
+                  [edge]: "26%",
+                  width: "1px",
+                  height: "140%",
+                  background:
+                    "linear-gradient(180deg, transparent 0%, rgba(220,167,242,.2) 40%, transparent 100%)",
+                  transform: `rotate(${deg})`,
+                  transformOrigin: R ? "top right" : "top left",
+                }}
+              />
 
               {/* glowing node at midpoint of accent line */}
-              <div style={{
-                position: "absolute",
-                top: "50%", [edge]: "calc(33% - 4px)",
-                width: "9px", height: "9px", borderRadius: "50%",
-                background: "rgba(220,167,242,.6)",
-                boxShadow: "0 0 14px 4px rgba(220,167,242,.28)",
-              }} />
+              <div
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  [edge]: "calc(33% - 4px)",
+                  width: "9px",
+                  height: "9px",
+                  borderRadius: "50%",
+                  background: "rgba(220,167,242,.6)",
+                  boxShadow: "0 0 14px 4px rgba(220,167,242,.28)",
+                }}
+              />
             </div>
           );
         })}
@@ -1001,18 +197,6 @@ function PageDiagBg({ bands = 7 }) {
 }
 
 /* ─── parallax hook ─── */
-function useParallax(ref, speed = 0.18) {
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const onScroll = () => {
-      const c = el.getBoundingClientRect().top + el.getBoundingClientRect().height / 2 - window.innerHeight / 2;
-      el.style.transform = `translateY(${c * speed}px)`;
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [ref, speed]);
-}
 
 /* ─── plain section wrapper (no per-section bg) ─── */
 function Section({ id, className = "", py = "py-16", children }) {
@@ -1029,16 +213,36 @@ function Section({ id, className = "", py = "py-16", children }) {
 function SectionHeader({ eyebrow, title, subtitle }) {
   return (
     <div className="mb-10">
-      <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#dca7f2" }}>{eyebrow}</p>
-      <h2 className="font-bold tracking-tight mb-2"
-        style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(2rem,4.5vw,3.2rem)", lineHeight:1.1, ...gradStyle }}>
+      <p
+        className="text-xs font-semibold uppercase tracking-widest mb-1"
+        style={{ color: "#dca7f2" }}
+      >
+        {eyebrow}
+      </p>
+      <h2
+        className="font-bold tracking-tight mb-2"
+        style={{
+          // fontFamily: "'Playfair Display',serif",
+          fontSize: "clamp(2rem,4.5vw,3.2rem)",
+          lineHeight: 1.1,
+          ...gradStyle,
+        }}
+      >
         {title}
       </h2>
-      {subtitle && <p className="text-slate-500 text-sm max-w-xl">{subtitle}</p>}
+      {subtitle && (
+        <p className="text-slate-500 text-sm max-w-xl">{subtitle}</p>
+      )}
       <div className="flex items-center gap-3 mt-4">
         <div className="h-[2px] w-16 rounded-full" style={accentBar} />
-        <div className="h-[1px] w-8 rounded-full" style={{ background:"rgba(220,167,242,.3)" }} />
-        <div className="h-[1px] w-4 rounded-full" style={{ background:"rgba(220,167,242,.15)" }} />
+        <div
+          className="h-[1px] w-8 rounded-full"
+          style={{ background: "rgba(220,167,242,.3)" }}
+        />
+        <div
+          className="h-[1px] w-4 rounded-full"
+          style={{ background: "rgba(220,167,242,.15)" }}
+        />
       </div>
     </div>
   );
@@ -1048,7 +252,10 @@ function SectionHeader({ eyebrow, title, subtitle }) {
 function VisaBullet({ children }) {
   return (
     <li className="flex items-center gap-2.5 px-2 py-1.5 rounded-xl transition-colors hover:bg-purple-50 group">
-      <span className="w-2 h-2 rounded-full shrink-0 group-hover:scale-125 transition-transform" style={accentBar} />
+      <span
+        className="w-2 h-2 rounded-full shrink-0 group-hover:scale-125 transition-transform"
+        style={accentBar}
+      />
       <span className="text-sm text-slate-700">{children}</span>
     </li>
   );
@@ -1057,17 +264,37 @@ function VisaBullet({ children }) {
 /* ─── RegionCard ─── */
 function RegionCard({ icon: Icon, title, children, twoCol = false }) {
   return (
-    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border transition-all duration-300"
-      style={{ borderColor:"rgba(220,167,242,.2)", boxShadow:cardShadow }}
-      onMouseEnter={e=>{ e.currentTarget.style.borderColor="rgba(220,167,242,.55)"; e.currentTarget.style.boxShadow=cardShadowHover; e.currentTarget.style.transform="translateY(-2px)"; }}
-      onMouseLeave={e=>{ e.currentTarget.style.borderColor="rgba(220,167,242,.2)"; e.currentTarget.style.boxShadow=cardShadow; e.currentTarget.style.transform="translateY(0)"; }}>
-      <div className="flex items-center gap-2 pb-2 mb-3" style={{ borderBottom:"1px solid rgba(220,167,242,.15)" }}>
-        <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={iconBg}>
-          <Icon size={15} style={{ color:"#dca7f2" }} />
+    <div
+      className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border transition-all duration-300"
+      style={{ borderColor: "rgba(220,167,242,.2)", boxShadow: cardShadow }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = "rgba(220,167,242,.55)";
+        e.currentTarget.style.boxShadow = cardShadowHover;
+        e.currentTarget.style.transform = "translateY(-2px)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = "rgba(220,167,242,.2)";
+        e.currentTarget.style.boxShadow = cardShadow;
+        e.currentTarget.style.transform = "translateY(0)";
+      }}
+    >
+      <div
+        className="flex items-center gap-2 pb-2 mb-3"
+        style={{ borderBottom: "1px solid rgba(220,167,242,.15)" }}
+      >
+        <div
+          className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+          style={iconBg}
+        >
+          <Icon size={15} style={{ color: "#dca7f2" }} />
         </div>
-        <h4 className="font-semibold text-sm" style={gradStyle}>{title}</h4>
+        <h4 className="font-semibold text-sm" style={gradStyle}>
+          {title}
+        </h4>
       </div>
-      <ul className={`text-sm text-slate-500 gap-y-1.5 gap-x-3 ${twoCol?"grid grid-cols-2":"flex flex-col"}`}>
+      <ul
+        className={`text-sm text-slate-500 gap-y-1.5 gap-x-3 ${twoCol ? "grid grid-cols-2" : "flex flex-col"}`}
+      >
         {children}
       </ul>
     </div>
@@ -1077,18 +304,41 @@ function RegionCard({ icon: Icon, title, children, twoCol = false }) {
 /* ─── ServiceCard ─── */
 function ServiceCard({ icon: Icon, title, desc }) {
   return (
-    <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border relative overflow-hidden transition-all duration-300 group"
-      style={{ borderColor:"rgba(220,167,242,.2)", boxShadow:cardShadow }}
-      onMouseEnter={e=>{ e.currentTarget.style.borderColor="rgba(220,167,242,.55)"; e.currentTarget.style.boxShadow=cardShadowHover; e.currentTarget.style.transform="translateY(-3px)"; }}
-      onMouseLeave={e=>{ e.currentTarget.style.borderColor="rgba(220,167,242,.2)"; e.currentTarget.style.boxShadow=cardShadow; e.currentTarget.style.transform="translateY(0)"; }}>
-      <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-        style={{ background:"radial-gradient(circle,rgba(220,167,242,.12) 0%,transparent 70%)" }} />
-      <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style={iconBg}>
-        <Icon size={26} style={{ color:"#a855f7" }} />
+    <div
+      className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border relative overflow-hidden transition-all duration-300 group"
+      style={{ borderColor: "rgba(220,167,242,.2)", boxShadow: cardShadow }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = "rgba(220,167,242,.55)";
+        e.currentTarget.style.boxShadow = cardShadowHover;
+        e.currentTarget.style.transform = "translateY(-3px)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = "rgba(220,167,242,.2)";
+        e.currentTarget.style.boxShadow = cardShadow;
+        e.currentTarget.style.transform = "translateY(0)";
+      }}
+    >
+      <div
+        className="absolute -top-8 -right-8 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle,rgba(220,167,242,.12) 0%,transparent 70%)",
+        }}
+      />
+      <div
+        className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
+        style={iconBg}
+      >
+        <Icon size={26} style={{ color: "#a855f7" }} />
       </div>
-      <h3 className="text-xl font-bold mb-3" style={gradStyle}>{title}</h3>
+      <h3 className="text-xl font-bold mb-3" style={gradStyle}>
+        {title}
+      </h3>
       <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
-      <div className="absolute bottom-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={accentBar} />
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={accentBar}
+      />
     </div>
   );
 }
@@ -1096,18 +346,34 @@ function ServiceCard({ icon: Icon, title, desc }) {
 /* ─── WhyCard ─── */
 function WhyCard({ icon: Icon, title, desc }) {
   return (
-    <div className="flex gap-4 border rounded-2xl p-5 bg-white/80 backdrop-blur-sm relative overflow-hidden transition-all duration-300 group"
-      style={{ borderColor:"rgba(220,167,242,.2)", boxShadow:cardShadow }}
-      onMouseEnter={e=>{ e.currentTarget.style.borderColor="rgba(220,167,242,.55)"; e.currentTarget.style.boxShadow=cardShadowHover; }}
-      onMouseLeave={e=>{ e.currentTarget.style.borderColor="rgba(220,167,242,.2)"; e.currentTarget.style.boxShadow=cardShadow; }}>
-      <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style={iconBg}>
-        <Icon size={20} style={{ color:"#a855f7" }} />
+    <div
+      className="flex gap-4 border rounded-2xl p-5 bg-white/80 backdrop-blur-sm relative overflow-hidden transition-all duration-300 group"
+      style={{ borderColor: "rgba(220,167,242,.2)", boxShadow: cardShadow }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = "rgba(220,167,242,.55)";
+        e.currentTarget.style.boxShadow = cardShadowHover;
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = "rgba(220,167,242,.2)";
+        e.currentTarget.style.boxShadow = cardShadow;
+      }}
+    >
+      <div
+        className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
+        style={iconBg}
+      >
+        <Icon size={20} style={{ color: "#a855f7" }} />
       </div>
       <div>
-        <h3 className="font-bold text-base mb-1" style={gradStyle}>{title}</h3>
+        <h3 className="font-bold text-base mb-1" style={gradStyle}>
+          {title}
+        </h3>
         <p className="text-sm text-slate-500">{desc}</p>
       </div>
-      <div className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={accentBar} />
+      <div
+        className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={accentBar}
+      />
     </div>
   );
 }
@@ -1115,25 +381,57 @@ function WhyCard({ icon: Icon, title, desc }) {
 /* ─── BlogCard ─── */
 function BlogCard({ src, badge, title, excerpt, date }) {
   return (
-    <div className="group cursor-pointer bg-white/80 backdrop-blur-sm rounded-2xl border p-4 transition-all duration-300"
-      style={{ borderColor:"rgba(220,167,242,.2)", boxShadow:cardShadow }}
-      onMouseEnter={e=>{ e.currentTarget.style.borderColor="rgba(220,167,242,.55)"; e.currentTarget.style.boxShadow=cardShadowHover; e.currentTarget.style.transform="translateY(-3px)"; }}
-      onMouseLeave={e=>{ e.currentTarget.style.borderColor="rgba(220,167,242,.2)"; e.currentTarget.style.boxShadow=cardShadow; e.currentTarget.style.transform="translateY(0)"; }}>
+    <div
+      className="group cursor-pointer bg-white/80 backdrop-blur-sm rounded-2xl border p-4 transition-all duration-300"
+      style={{ borderColor: "rgba(220,167,242,.2)", boxShadow: cardShadow }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = "rgba(220,167,242,.55)";
+        e.currentTarget.style.boxShadow = cardShadowHover;
+        e.currentTarget.style.transform = "translateY(-3px)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = "rgba(220,167,242,.2)";
+        e.currentTarget.style.boxShadow = cardShadow;
+        e.currentTarget.style.transform = "translateY(0)";
+      }}
+    >
       <div className="aspect-video rounded-xl overflow-hidden mb-5 relative">
-        <Image alt={title} src={src} fill sizes="(max-width:1024px) 100vw,384px"
-          style={{ objectFit:"cover" }} className="group-hover:scale-105 transition-transform duration-500" priority />
-        <div className="absolute top-3 left-3 px-3 py-1 rounded-lg text-xs font-bold"
-          style={{ background:"rgba(255,255,255,.92)", color:"#a855f7", boxShadow:"0 1px 6px rgba(168,85,247,.15)" }}>
+        <Image
+          alt={title}
+          src={src}
+          fill
+          sizes="(max-width:1024px) 100vw,384px"
+          style={{ objectFit: "cover" }}
+          className="group-hover:scale-105 transition-transform duration-500"
+          priority
+        />
+        <div
+          className="absolute top-3 left-3 px-3 py-1 rounded-lg text-xs font-bold"
+          style={{
+            background: "rgba(255,255,255,.92)",
+            color: "#a855f7",
+            boxShadow: "0 1px 6px rgba(168,85,247,.15)",
+          }}
+        >
           {badge}
         </div>
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
-      <h3 className="text-lg font-bold mb-2 transition-colors group-hover:text-[#a855f7]"
-        style={{ fontFamily:"'Playfair Display',serif", lineHeight:1.3 }}>{title}</h3>
+      <h3
+        className="text-lg font-bold mb-2 transition-colors group-hover:text-[#a855f7]"
+        style={{ lineHeight: 1.3 }}
+      >
+        {title}
+      </h3>
       <p className="text-slate-500 text-sm line-clamp-3 mb-4">{excerpt}</p>
       <div className="flex items-center justify-between">
-        <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">{date}</span>
-        <span className="text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1" style={{ color:"#a855f7" }}>
+        <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+          {date}
+        </span>
+        <span
+          className="text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1"
+          style={{ color: "#a855f7" }}
+        >
           Читать <ArrowRight size={12} />
         </span>
       </div>
@@ -1146,98 +444,272 @@ function BlogCard({ src, badge, title, excerpt, date }) {
 ════════════════════════════════════════════ */
 export default function Home() {
   const heroRef = useRef(null);
-  useParallax(heroRef, 0.18);
-
   return (
     /* position:relative so the fixed PageDiagBg stacks under content */
     <div className="relative w-full">
-
       {/* Single global diagonal background — fixed behind everything */}
       <PageDiagBg bands={7} />
 
       <main className="relative z-10">
-
         {/* ══════ HERO ══════ */}
-        <div className="relative w-full min-h-[520px] flex items-end"
+        {/* <div
+          className="relative w-full min-h-[520px] flex items-end"
           style={{
-            background:"linear-gradient(135deg,#1a0a2e 0%,#2d1354 40%,#4a1a72 70%,#6b2fa0 100%)",
-            boxShadow:"0 16px 64px rgba(168,85,247,.25)",
-          }}>
-          <div ref={heroRef} className="absolute inset-0 will-change-transform">
-            <Image alt="World Map" src="/visa-from-kz.jpeg" fill style={{ objectFit:"cover", opacity:0.22 }} priority />
+            background:
+              "linear-gradient(135deg,#1a0a2e 0%,#2d1354 40%,#4a1a72 70%,#6b2fa0 70%)",
+            boxShadow: "0 16px 64px rgba(168,85,247,.25)",
+          }}
+        >
+          <div className="absolute inset-0 will-change-transform">
+            <Image
+              alt="World Map"
+              src="/visa-from-kz.jpeg"
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+            />
           </div>
-          <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
-            <defs><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-              <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#dca7f2" strokeWidth="0.5"/>
-            </pattern></defs>
+          <svg
+            className="absolute inset-0 w-full h-full opacity-[0.05]"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <pattern
+                id="grid"
+                width="48"
+                height="48"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 48 0 L 0 0 0 48"
+                  fill="none"
+                  stroke="#dca7f2"
+                  strokeWidth="0.5"
+                />
+              </pattern>
+            </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
           </svg>
-          <svg className="absolute right-[-60px] top-[-60px] w-[440px] h-[440px] opacity-10" viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="180" fill="none" stroke="#dca7f2" strokeWidth="1"/>
-            <circle cx="200" cy="200" r="130" fill="none" stroke="#dca7f2" strokeWidth="0.7"/>
-            <circle cx="200" cy="200" r="80"  fill="none" stroke="#dca7f2" strokeWidth="0.5"/>
-            <ellipse cx="200" cy="200" rx="180" ry="60" fill="none" stroke="#dca7f2" strokeWidth="0.5"/>
-            <ellipse cx="200" cy="200" rx="60" ry="180" fill="none" stroke="#dca7f2" strokeWidth="0.5"/>
+          <svg
+            className="absolute right-[-60px] top-[-60px] w-[440px] h-[440px] opacity-10"
+            viewBox="0 0 400 400"
+          >
+            <circle
+              cx="200"
+              cy="200"
+              r="180"
+              fill="none"
+              stroke="#dca7f2"
+              strokeWidth="1"
+            />
+            <circle
+              cx="200"
+              cy="200"
+              r="130"
+              fill="none"
+              stroke="#dca7f2"
+              strokeWidth="0.7"
+            />
+            <circle
+              cx="200"
+              cy="200"
+              r="80"
+              fill="none"
+              stroke="#dca7f2"
+              strokeWidth="0.5"
+            />
+            <ellipse
+              cx="200"
+              cy="200"
+              rx="180"
+              ry="60"
+              fill="none"
+              stroke="#dca7f2"
+              strokeWidth="0.5"
+            />
+            <ellipse
+              cx="200"
+              cy="200"
+              rx="60"
+              ry="180"
+              fill="none"
+              stroke="#dca7f2"
+              strokeWidth="0.5"
+            />
           </svg>
           <div className="absolute inset-0 bg-gradient-to-t from-[#1a0a2e]/80 via-transparent to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a0a2e]/60 via-transparent to-transparent" />
 
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 pt-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
             <div className="max-w-2xl">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-4 py-1.5 rounded-full"
-                style={{ background:"rgba(220,167,242,.15)", border:"0.5px solid rgba(220,167,242,.4)", color:"#dca7f2" }}>
+              <span
+                className="inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-4 py-1.5 rounded-full"
+                style={{
+                  background: "rgba(220,167,242,.15)",
+                  border: "0.5px solid rgba(220,167,242,.4)",
+                  color: "#dca7f2",
+                }}
+              >
                 🌐 Визовый центр · Казахстан
               </span>
-              <h1 className="font-bold mb-4"
-                style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(2.4rem,6vw,4rem)", lineHeight:1.1, color:"#f5e6ff", textShadow:"0 2px 20px rgba(168,85,247,.4)" }}>
-                Весь мир открыт<br />
-                <span style={{ ...gradStyle, textShadow:"none" }}>для вас</span>
+              <h1
+                className="font-bold mb-4"
+                style={{
+                  fontSize: "clamp(2.4rem,6vw,4rem)",
+                  lineHeight: 1.1,
+                  color: "#f5e6ff",
+                  textShadow: "0 2px 20px rgba(168,85,247,.4)",
+                }}
+              >
+                Весь мир открыт
+                <br />
+                <span style={{ ...gradStyle, textShadow: "none" }}>
+                  для вас
+                </span>
               </h1>
-              <p className="text-sm mb-8 max-w-md" style={{ color:"rgba(245,230,255,.75)", lineHeight:1.7 }}>
-                Профессиональная помощь в получении виз, ВНЖ и оформлении документов в любую страну мира — быстро, надёжно, с гарантией.
+              <p
+                className="text-sm mb-8 max-w-md"
+                style={{ color: "rgba(245,230,255,.75)", lineHeight: 1.7 }}
+              >
+                Профессиональная помощь в получении виз, ВНЖ и оформлении
+                документов в любую страну мира — быстро, надёжно, с гарантией.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="#services" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
-                  style={{ background:"linear-gradient(135deg,#dca7f2,#a855f7)", color:"#fff", boxShadow:"0 4px 16px rgba(168,85,247,.4)" }}>
+                <Link
+                  href="#services"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
+                  style={{
+                    background: "linear-gradient(135deg,#dca7f2,#a855f7)",
+                    color: "#fff",
+                    boxShadow: "0 4px 16px rgba(168,85,247,.4)",
+                  }}
+                >
                   Наши услуги <ArrowRight size={15} />
                 </Link>
-                <Link href="#why-us" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
-                  style={{ background:"rgba(255,255,255,.08)", border:"1px solid rgba(220,167,242,.35)", color:"#f0d9ff", backdropFilter:"blur(8px)" }}>
+                <Link
+                  href="#why-us"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
+                  style={{
+                    background: "rgba(255,255,255,.08)",
+                    border: "1px solid rgba(220,167,242,.35)",
+                    color: "#f0d9ff",
+                    backdropFilter: "blur(8px)",
+                  }}
+                >
                   Почему мы?
                 </Link>
               </div>
             </div>
-            <div className="hidden lg:grid grid-cols-4 gap-px overflow-hidden rounded-2xl shrink-0"
-              style={{ background:"rgba(220,167,242,.1)", border:"1px solid rgba(220,167,242,.15)" }}>
-              <div className="px-6 py-4 text-center" style={{ borderLeft:"1px solid rgba(220,167,242,.1)" }}>
-                <p className="text-lg font-bold" style={{ color:"#f0d9ff", fontFamily:"'Playfair Display',serif" }}>12 000+</p>
-                <p className="text-xs" style={{ color:"rgba(220,167,242,.7)" }}>клиентов</p>
+            <div
+              className="hidden lg:grid grid-cols-4 gap-px overflow-hidden rounded-2xl shrink-0"
+              style={{
+                background: "rgba(220,167,242,.1)",
+                border: "1px solid rgba(220,167,242,.15)",
+              }}
+            >
+              <div
+                className="px-6 py-4 text-center"
+                style={{ borderLeft: "1px solid rgba(220,167,242,.1)" }}
+              >
+                <p
+                  className="text-lg font-bold"
+                  style={{
+                    color: "#f0d9ff",
+                  }}
+                >
+                  12 000+
+                </p>
+                <p
+                  className="text-xs"
+                  style={{ color: "rgba(220,167,242,.7)" }}
+                >
+                  клиентов
+                </p>
               </div>
-              <div className="px-6 py-4 text-center" style={{ borderLeft:"1px solid rgba(220,167,242,.1)" }}>
-                <p className="text-lg font-bold" style={{ color:"#f0d9ff", fontFamily:"'Playfair Display',serif" }}>10+</p>
-                <p className="text-xs" style={{ color:"rgba(220,167,242,.7)" }}>лет опыта</p>
+              <div
+                className="px-6 py-4 text-center"
+                style={{ borderLeft: "1px solid rgba(220,167,242,.1)" }}
+              >
+                <p
+                  className="text-lg font-bold"
+                  style={{
+                    color: "#f0d9ff",
+                  }}
+                >
+                  10+
+                </p>
+                <p
+                  className="text-xs"
+                  style={{ color: "rgba(220,167,242,.7)" }}
+                >
+                  лет опыта
+                </p>
               </div>
-              <div className="px-6 py-4 text-center" style={{ borderLeft:"1px solid rgba(220,167,242,.1)" }}>
-                <p className="text-lg font-bold" style={{ color:"#f0d9ff", fontFamily:"'Playfair Display',serif" }}>150+</p>
-                <p className="text-xs" style={{ color:"rgba(220,167,242,.7)" }}>стран</p>
+              <div
+                className="px-6 py-4 text-center"
+                style={{ borderLeft: "1px solid rgba(220,167,242,.1)" }}
+              >
+                <p
+                  className="text-lg font-bold"
+                  style={{
+                    color: "#f0d9ff",
+                  }}
+                >
+                  150+
+                </p>
+                <p
+                  className="text-xs"
+                  style={{ color: "rgba(220,167,242,.7)" }}
+                >
+                  стран
+                </p>
               </div>
-              <div className="px-6 py-4 text-center" style={{ borderLeft:"1px solid rgba(220,167,242,.1)" }}>
-                <p className="text-lg font-bold" style={{ color:"#f0d9ff", fontFamily:"'Playfair Display',serif" }}>98%</p>
-                <p className="text-xs" style={{ color:"rgba(220,167,242,.7)" }}>одобрений</p>
+              <div
+                className="px-6 py-4 text-center"
+                style={{ borderLeft: "1px solid rgba(220,167,242,.1)" }}
+              >
+                <p
+                  className="text-lg font-bold"
+                  style={{
+                    color: "#f0d9ff",
+                  }}
+                >
+                  98%
+                </p>
+                <p
+                  className="text-xs"
+                  style={{ color: "rgba(220,167,242,.7)" }}
+                >
+                  одобрений
+                </p>
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* ══════ VISAS ══════ */}
-        <Section py="py-16">
-          <SectionHeader eyebrow="Визовые услуги" title="Визы из Казахстана" subtitle="Профессиональная помощь в получении виз в любую страну мира" />
+        <Section py="py-12">
+          <SectionHeader
+            eyebrow="Визовые услуги"
+            title="Визы из Казахстана"
+            subtitle="Профессиональная помощь в получении виз в любую страну мира"
+          />
           <div className="grid lg:grid-cols-12 gap-5">
             <div className="lg:col-span-5">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border relative overflow-hidden"
-                style={{ borderColor:"rgba(220,167,242,.25)", boxShadow:cardShadow }}>
-                <div className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl" style={accentBar} />
-                <h4 className="font-bold text-base mb-4" style={gradStyle}>Виды виз</h4>
+              <div
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border relative overflow-hidden"
+                style={{
+                  borderColor: "rgba(220,167,242,.25)",
+                  boxShadow: cardShadow,
+                }}
+              >
+                <div
+                  className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl"
+                  style={accentBar}
+                />
+                <h4 className="font-bold text-base mb-4" style={gradStyle}>
+                  Виды виз
+                </h4>
                 <ul className="flex flex-col gap-1">
                   <VisaBullet>Дипломатические и служебные визы</VisaBullet>
                   <VisaBullet>Инвестиционные визы</VisaBullet>
@@ -1251,25 +723,89 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className="lg:col-span-7 relative hidden lg:flex flex-col justify-between min-h-[380px] rounded-3xl overflow-hidden p-6"
-              style={{ background:"linear-gradient(135deg,#1a0a2e 0%,#2d1354 40%,#4a1a72 70%,#6b2fa0 100%)", boxShadow:"0 8px 40px rgba(168,85,247,.22)" }}>
-              <Image alt="World Map" src="/visa-from-kz.jpeg" fill sizes="756px" style={{ objectFit:"cover", opacity:0.22 }} priority />
-              <svg className="absolute right-[-40px] top-[-40px] w-64 h-64 opacity-10" viewBox="0 0 300 300">
-                <circle cx="150" cy="150" r="140" fill="none" stroke="#dca7f2" strokeWidth="1"/>
-                <circle cx="150" cy="150" r="100" fill="none" stroke="#dca7f2" strokeWidth="0.7"/>
-                <ellipse cx="150" cy="150" rx="140" ry="55" fill="none" stroke="#dca7f2" strokeWidth="0.5"/>
-                <ellipse cx="150" cy="150" rx="55" ry="140" fill="none" stroke="#dca7f2" strokeWidth="0.5"/>
+            <div
+              className="lg:col-span-7 relative hidden lg:flex flex-col justify-between min-h-[380px] rounded-3xl overflow-hidden p-6"
+              style={{
+                background:
+                  "linear-gradient(135deg,#1a0a2e 0%,#2d1354 40%,#4a1a72 70%,#6b2fa0 100%)",
+                boxShadow: "0 8px 40px rgba(168,85,247,.22)",
+              }}
+            >
+              <Image
+                alt="World Map"
+                src="/visa-from-kz.jpeg"
+                fill
+                sizes="756px"
+                style={{ objectFit: "cover" }}
+                priority
+              />
+              <svg
+                className="absolute right-[-40px] top-[-40px] w-64 h-64 opacity-10"
+                viewBox="0 0 300 300"
+              >
+                <circle
+                  cx="150"
+                  cy="150"
+                  r="140"
+                  fill="none"
+                  stroke="#dca7f2"
+                  strokeWidth="1"
+                />
+                <circle
+                  cx="150"
+                  cy="150"
+                  r="100"
+                  fill="none"
+                  stroke="#dca7f2"
+                  strokeWidth="0.7"
+                />
+                <ellipse
+                  cx="150"
+                  cy="150"
+                  rx="140"
+                  ry="55"
+                  fill="none"
+                  stroke="#dca7f2"
+                  strokeWidth="0.5"
+                />
+                <ellipse
+                  cx="150"
+                  cy="150"
+                  rx="55"
+                  ry="140"
+                  fill="none"
+                  stroke="#dca7f2"
+                  strokeWidth="0.5"
+                />
               </svg>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a0a2e]/70 via-transparent to-transparent" />
-              <span className="relative z-10 self-start text-xs font-medium px-4 py-1.5 rounded-full"
-                style={{ background:"rgba(220,167,242,.15)", border:"0.5px solid rgba(220,167,242,.4)", color:"#dca7f2" }}>
-                🌐 Весь мир открыт
+              <div className="absolute inset-0 bg-linear-to-t from-[#1a0a2e]/70 via-transparent to-transparent" />
+              <span
+                className="relative z-10 self-start text-xs font-medium px-4 py-1.5 rounded-full"
+                style={{
+                  background: "rgba(220,167,242,.15)",
+                  border: "0.5px solid rgba(220,167,242,.4)",
+                  color: "#dca7f2",
+                }}
+              >
+                {/* 🌐 Весь мир открыт */}
               </span>
               <div className="relative z-10">
-                <h3 className="font-bold mb-2" style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.6rem,3vw,2.4rem)", color:"#f5e6ff", lineHeight:1.2 }}>
-                  Откройте мир<br />вместе с нами
+                <h3
+                  className="font-bold mb-2"
+                  style={{
+                    fontSize: "clamp(1.6rem,3vw,2.4rem)",
+                    color: "#f5e6ff",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  Откройте мир
+                  <br />
+                  вместе с нами
                 </h3>
-                <p className="text-sm" style={{ color:"rgba(245,230,255,.7)", maxWidth:280 }}>
+                <p
+                  className="text-sm"
+                  style={{ color: "rgba(245,230,255,.7)", maxWidth: 280 }}
+                >
                   Профессиональная помощь в получении виз в любую страну мира
                 </p>
               </div>
@@ -1277,103 +813,204 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
             <RegionCard icon={Euro} title="Европа">
-              <li>Германия</li><li>Франция</li><li>Испания</li><li>Италия</li><li>Англия</li>
+              <li>Германия</li>
+              <li>Франция</li>
+              <li>Испания</li>
+              <li>Италия</li>
+              <li>Англия</li>
             </RegionCard>
             <RegionCard icon={Landmark} title="Азия" twoCol>
-              <li>Вьетнам</li><li>Индонезия</li><li>Камбоджа</li><li>Лаос</li>
-              <li>Малайзия</li><li>Сингапур</li><li>Таиланд</li><li>Филиппины</li>
+              <li>Вьетнам</li>
+              <li>Индонезия</li>
+              <li>Камбоджа</li>
+              <li>Лаос</li>
+              <li>Малайзия</li>
+              <li>Сингапур</li>
+              <li>Таиланд</li>
+              <li>Филиппины</li>
             </RegionCard>
             <RegionCard icon={Building2} title="Юго-Восточная Азия" twoCol>
-              <li>Китай</li><li>Япония</li><li>Афганистан</li><li>Бангладеш</li>
-              <li>Индия</li><li>Мальдивы</li><li>Пакистан</li><li>Шри-Ланка</li>
+              <li>Китай</li>
+              <li>Япония</li>
+              <li>Афганистан</li>
+              <li>Бангладеш</li>
+              <li>Индия</li>
+              <li>Мальдивы</li>
+              <li>Пакистан</li>
+              <li>Шри-Ланка</li>
             </RegionCard>
             <RegionCard icon={Globe} title="Южная Америка (США/Канада)">
-              <li>США</li><li>Канада</li><li>Австралия</li>
+              <li>США</li>
+              <li>Канада</li>
+              <li>Австралия</li>
             </RegionCard>
           </div>
         </Section>
 
         {/* ══════ SERVICES ══════ */}
-        <Section id="services" py="py-16">
-          <SectionHeader eyebrow="Что мы предлагаем" title="Дополнительные услуги" subtitle="Полный спектр услуг для комфортного переезда и путешествий" />
+        <Section id="services" py="py-12">
+          <SectionHeader
+            eyebrow="Что мы предлагаем"
+            title="Дополнительные услуги"
+            subtitle="Полный спектр услуг для комфортного переезда и путешествий"
+          />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <ServiceCard icon={HeartPulse} title="Страхование"
-              desc="Оформление медицинских страховых полисов для выезда за рубеж и пребывания в РК в соответствии с международными стандартами." />
-            <ServiceCard icon={BadgeCheck} title="Работа за рубежом"
-              desc="Помощь в поиске легального трудоустройства в странах Европы, Азии и Америки. Полное документальное сопровождение." />
-            <ServiceCard icon={Headphones} title="Вызов специалиста"
-              desc="Консультация нашего эксперта с выездом в ваш офис или на дом для сбора документов и заполнения анкет." />
-            <ServiceCard icon={ShieldCheck} title="Проверка документов"
-              desc="Профессиональный аудит вашего пакета документов для исключения рисков отказа в получении визы или РВП." />
-            <ServiceCard icon={UsersRound} title="Услуги для граждан РФ"
-              desc="Специализированная помощь в получении ИИН, открытии банковских карт и оформлении ВНЖ для граждан Российской Федерации." />
-            <ServiceCard icon={Hotel} title="Бронирование отелей"
-              desc="Подбор и бронирование отелей и курортных баз по всему миру по эксклюзивным корпоративным ценам." />
+            <ServiceCard
+              icon={HeartPulse}
+              title="Страхование"
+              desc="Оформление медицинских страховых полисов для выезда за рубеж и пребывания в РК в соответствии с международными стандартами."
+            />
+            <ServiceCard
+              icon={BadgeCheck}
+              title="Работа за рубежом"
+              desc="Помощь в поиске легального трудоустройства в странах Европы, Азии и Америки. Полное документальное сопровождение."
+            />
+            <ServiceCard
+              icon={Headphones}
+              title="Вызов специалиста"
+              desc="Консультация нашего эксперта с выездом в ваш офис или на дом для сбора документов и заполнения анкет."
+            />
+            <ServiceCard
+              icon={ShieldCheck}
+              title="Проверка документов"
+              desc="Профессиональный аудит вашего пакета документов для исключения рисков отказа в получении визы или РВП."
+            />
+            <ServiceCard
+              icon={UsersRound}
+              title="Услуги для граждан РФ"
+              desc="Специализированная помощь в получении ИИН, открытии банковских карт и оформлении ВНЖ для граждан Российской Федерации."
+            />
+            <ServiceCard
+              icon={Hotel}
+              title="Бронирование отелей"
+              desc="Подбор и бронирование отелей и курортных баз по всему миру по эксклюзивным корпоративным ценам."
+            />
           </div>
         </Section>
 
         {/* ══════ BID FORM ══════ */}
-        <Section py="py-16">
+        <Section py="py-12">
           <BidForm />
         </Section>
 
         {/* ══════ WHY US ══════ */}
-        <Section id="why-us" py="py-16">
+        <Section id="why-us" py="py-12">
           <div className="flex flex-col md:flex-row gap-10 items-start">
             <div className="shrink-0">
-              <div className="rounded-2xl px-8 py-6 relative overflow-hidden"
-                style={{ background:"linear-gradient(135deg,#dca7f2,#a855f7,#7c3aed)", boxShadow:"0 8px 32px rgba(168,85,247,.35)", minWidth:180 }}>
-                <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 200 120">
-                  <circle cx="160" cy="30" r="80" fill="none" stroke="white" strokeWidth="1"/>
-                  <circle cx="160" cy="30" r="50" fill="none" stroke="white" strokeWidth="0.6"/>
+              <div
+                className="rounded-2xl px-8 py-6 relative overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg,#dca7f2,#a855f7,#7c3aed)",
+                  boxShadow: "0 8px 32px rgba(168,85,247,.35)",
+                  minWidth: 180,
+                }}
+              >
+                <svg
+                  className="absolute inset-0 w-full h-full opacity-10"
+                  viewBox="0 0 200 120"
+                >
+                  <circle
+                    cx="160"
+                    cy="30"
+                    r="80"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="1"
+                  />
+                  <circle
+                    cx="160"
+                    cy="30"
+                    r="50"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="0.6"
+                  />
                 </svg>
-                <h2 className="text-3xl font-bold text-center text-white whitespace-nowrap relative z-10"
-                  style={{ fontFamily:"'Playfair Display',serif", textShadow:"0 2px 12px rgba(0,0,0,.2)" }}>
+                <h2
+                  className="text-3xl font-bold text-center text-white whitespace-nowrap relative z-10"
+                  style={{
+                    textShadow: "0 2px 12px rgba(0,0,0,.2)",
+                  }}
+                >
                   Почему мы?
                 </h2>
               </div>
               <div className="flex flex-col gap-1 mt-4 pl-2">
-                <div className="h-[2px] w-full rounded-full" style={accentBar} />
-                <div className="h-[1px] w-3/4 rounded-full" style={{ background:"rgba(220,167,242,.3)" }} />
-                <div className="h-[1px] w-1/2 rounded-full" style={{ background:"rgba(220,167,242,.15)" }} />
+                <div
+                  className="h-[2px] w-full rounded-full"
+                  style={accentBar}
+                />
+                <div
+                  className="h-[1px] w-3/4 rounded-full"
+                  style={{ background: "rgba(220,167,242,.3)" }}
+                />
+                <div
+                  className="h-[1px] w-1/2 rounded-full"
+                  style={{ background: "rgba(220,167,242,.15)" }}
+                />
               </div>
             </div>
             <div className="grid md:grid-cols-2 gap-4 flex-1">
-              <WhyCard icon={Brain} title="Глубокая экспертиза" desc="Мы специализируемся исключительно на миграционном законодательстве Казахстана." />
-              <WhyCard icon={History} title="10+ лет опыта" desc="С 2014 года мы помогли более 12 000 иностранным гражданам." />
-              <WhyCard icon={CheckCircle} title="Гарантированный результат" desc="Заключаем официальный договор и берем на себя полную ответственность." />
-              <WhyCard icon={Eye} title="Прозрачные условия" desc="Стоимость услуг фиксируется в договоре с самого начала." />
+              <WhyCard
+                icon={Brain}
+                title="Глубокая экспертиза"
+                desc="Мы специализируемся исключительно на миграционном законодательстве Казахстана."
+              />
+              <WhyCard
+                icon={History}
+                title="10+ лет опыта"
+                desc="С 2014 года мы помогли более 12 000 иностранным гражданам."
+              />
+              <WhyCard
+                icon={CheckCircle}
+                title="Гарантированный результат"
+                desc="Заключаем официальный договор и берем на себя полную ответственность."
+              />
+              <WhyCard
+                icon={Eye}
+                title="Прозрачные условия"
+                desc="Стоимость услуг фиксируется в договоре с самого начала."
+              />
             </div>
           </div>
         </Section>
 
         {/* ══════ PAYMENT ══════ */}
-        <Section py="py-16">
+        <Section py="py-12">
           <PaymentVariants />
         </Section>
 
         {/* ══════ BLOG ══════ */}
-        <Section py="py-16">
-          <SectionHeader eyebrow="Полезно знать" title="Вопросы" subtitle="Актуальные гайды и новости миграционного законодательства" />
+        <Section py="py-12">
+          <SectionHeader
+            eyebrow="Полезно знать"
+            title="Вопросы"
+            subtitle="Актуальные гайды и новости миграционного законодательства"
+          />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             <BlogCard
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmYOf_hW1pOQ-GdqE4Hue0hTpVJIeYNNF-9pSDwS4PYlIvVOdJmg4ux31OXFcCJjvUOSC90XMPgfchtZhVR4wL16CDkNpUyuw-FA1nlwJCoe15Ek9t34KGv6UhFJYvJd8TOYKKEu99JAMshcxHz4GUAB7NbaroGJ31HSVqYtEWYNYZK-Bee_ZQTmMzY4XHiKvdoJa1YA7VpzbR6HjSvl_0hImV-ZN1SeV0l2-eI8zzcb2I_Z4p0d73MbtvKYyX_2ib8RGR46JNSQc"
-              badge="Гайд" title="Как получить ВНЖ в Казахстане в 2026 году?"
+              badge="Гайд"
+              title="Как получить ВНЖ в Казахстане в 2026 году?"
               excerpt="Подробная инструкция по сбору документов, срокам рассмотрения и основным требованиям для получения вида на жительство..."
-              date="12 Октября 2026" />
+              date="12 Октября 2026"
+            />
             <BlogCard
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC8QF-dedHBSPL-QG5238jDF-6frXS5LdTOBaesD08gjVXWIY-mDiu_tTCZJMaSHWPLCXnZAouFLF_TZ1ZEfeTTAOCIxDh5cMa9IuaHnpbhR80ZHEVMMmunBOd_Ym5I2nHhMYKkjzNNKW1FXHdDzj45eRD_wWLlL0zLpSgEu7OovQS-8AK0gZmHFAthI8ql0Zm3-YLv-V3pEpihE9eIEjH17srx__7w5g3oVzcU_Ab8V-vcpd0HZ9CknpoDXEHjrfO8riU4xSH6-o"
-              badge="Бизнес" title="Digital Nomad Visa: Новые возможности для IT"
+              badge="Бизнес"
+              title="Digital Nomad Visa: Новые возможности для IT"
               excerpt="Казахстан запустил программу для цифровых кочевников. Разбираемся, кто может претендовать и какие льготы это дает..."
-              date="05 Октября 2026" />
+              date="05 Октября 2026"
+            />
             <BlogCard
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAE8JWIqZxdXbN47Jxtwla685FfeS2LhXQT1qyh9leH4msvAFnAlh0mE_spieXkzZH1ShFnjgpQF8-N0L1HsJkxeu5aZku3yT87wexyhKR_MtdSN4Med6fbS8g5FZ7n_moZ1obfQDvIDEXlEf8P13kbKHw5mN1LemXM77DBD_AecKW9R6XHDhSflZWhmMEPyxfk6qtND0SRVkjdJWsGLk0-eHx8_DUS0ddMfJYLx26taLWyA0Qv2EPFoNQh3k2PpGDj9HKfTF0BIE"
-              badge="Законодательство" title="Изменения в миграционном учете"
+              badge="Законодательство"
+              title="Изменения в миграционном учете"
               excerpt="Важные поправки в законодательстве РК, которые вступают в силу с начала следующего месяца. О чем нужно знать иностранцам..."
-              date="28 Сентября 2026" />
+              date="28 Сентября 2026"
+            />
           </div>
         </Section>
-
       </main>
     </div>
   );
