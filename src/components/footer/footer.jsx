@@ -19,7 +19,7 @@ export const Footer = () => {
             <div className="mt-8 grid md:grid-cols-2 gap-8">
               <Image
                 alt="Entrance to the office building"
-                className="rounded-lg w-full h-auto object-cover"
+                className="rounded-lg w-full h-auto object-contain"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEZHb8QUz5F3KrrU7G5db4UjJxAKfULnKy7dzLpKAtAnumg7Vnp7SijC9Te4BTsQYHXcSkkROCn4X79HBTRISBtGV3ORZ9IaUe_VfI1Ttnxzblqsd9EegjrK_Ej9u81HSntHjU22_K8e6bv-0jiY5qbQTCPBlM89CMtQEX1A0QLkOOXTqt170K_QQBAVCMal5ewOKxryPqMhO33Q02VlaAGQEC9OVw_vqPTWmGW1wMwEVyCOBB5P3ljp--OqIVbYiQN5LlrYUb8MU"
                 width={400}
                 height={300}
@@ -29,7 +29,7 @@ export const Footer = () => {
               <Image
                 alt="Map showing office location"
                 className="rounded-lg w-full h-auto object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp_h3Eb_eZ9r_KUZuYDKzUUM0J22JuGZQDctpHB-l-2uBBZsODLPOdY6a722jiG4ELB8nlV2qF0T9AvavTo2VGDMANvg6cPSyNjLbAwmc4CLmH0DyQRuxA0cf5r7IMGhEtMnHhxJE3oxDm_mY0cF3RBxlDCmQAtZcvyUgJWPvXm9wzCY8MAo6FBwC0HeGAJTiFLW21tyqE3juh-7GWKx1htTNMNPN7n7wohMJBX93-BiIBF9mHkelQUu-NQZD45f94NG9M8M7Yj1s"
+                src={'/footer1.jpeg'}
                 width={400}
                 height={300}
                 style={{ width: "100%", height: "auto" }}
@@ -71,9 +71,6 @@ export const Footer = () => {
               <div className="text-xl font-bold text-slate-800">
                 VISAPRO
               </div>
-              <p className="text-sm text-slate-500 mt-1">
-              Официальный партнер - Ассоциация туристов Казахстана
-              </p>
             </div>
             <div className="text-slate-800">
               <p className="text-2xl font-bold">+7 707 367 5161</p>

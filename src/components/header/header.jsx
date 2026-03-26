@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import {
@@ -14,17 +14,34 @@ import {
 import React from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import VisaCalculatorModal, { VisaCalculatorButton } from "../visa-calculator/vis-calculator-modal";
+import VisaCalculatorModal, {
+  VisaCalculatorButton,
+} from "../visa-calculator/visa-calculator-modal";
 
-export default function Header () {
+const gradStyle = {
+  background: "linear-gradient(135deg, #dca7f2 0%, #a855f7 45%, #7c3aed 100%)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+};
 
+export default function Header() {
   return (
     <>
       <header className="py-2 lg:py-4 max-w-7xl mx-auto px-4">
         <div className="flex md:justify-between items-center border-b border-slate-200 pb-4 mb-4">
           <div className="w-full flex justify-between md:w-min items-center space-x-8">
             <div className="text-xl font-bold text-slate-800">
-              <Link href={"/"}>VISAPRO</Link>
+              <Link
+                href="/"
+                className="text-2xl md:text-3xl font-extrabold [text-shadow:0_2px_20px_rgba(168,85,247,.27)]"
+                style={{
+                  lineHeight: 1.07,
+                  ...gradStyle,
+                }}
+              >
+                VISAPRO
+              </Link>
             </div>
 
             <div className="flex items-center space-x-2 text-sm text-slate-500">
@@ -64,13 +81,12 @@ export default function Header () {
           </a>
         </div>
 
-        
         <nav className="flex justify-between items-center mt-4">
           <div className="flex flex-col lg:flex-row space-y-2 md:space-x-4 lg:space-y-0">
             <Link
               className="text-slate-800 font-bold hover:text-primary transition text-lg"
               href="/"
-              >
+            >
               Визы из Казахстана
             </Link>
             <Link
@@ -81,13 +97,13 @@ export default function Header () {
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-
             <VisaCalculatorButton
-              title='Бесплатная консультация'
+              title="Бесплатная консультация"
               buttonOptions={{
-                className: "text-white z-10 font-semibold hidden sm:inline-block whitespace-nowrap px-4 py-2",
+                className:
+                  "text-white z-10 font-semibold hidden sm:inline-block whitespace-nowrap px-4 py-2",
                 // variant: 'outline',
-                size: 'lg'
+                size: "lg",
               }}
             />
           </div>
@@ -95,4 +111,4 @@ export default function Header () {
       </header>
     </>
   );
-};
+}

@@ -40,7 +40,7 @@ export default function PaymentVariants() {
         {methods.map(({ icon: Icon, label }) => (
           <div
             key={label}
-            className="bg-white/80 backdrop-blur-sm flex items-center gap-4 py-4 px-7 rounded-2xl border transition-all duration-300 group cursor-default relative overflow-hidden"
+            className="bg-white/80 backdrop-blur-sm flex items-center gap-4 py-5 px-8 rounded-2xl border transition-all duration-300 group cursor-default relative overflow-hidden"
             style={{ borderColor: "rgba(220,167,242,.2)", boxShadow: "0 2px 16px rgba(168,85,247,.08), 0 1px 3px rgba(0,0,0,.06)" }}
             onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(220,167,242,.55)"; e.currentTarget.style.boxShadow = "0 8px 32px rgba(168,85,247,.16), 0 2px 8px rgba(0,0,0,.08)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(220,167,242,.2)";  e.currentTarget.style.boxShadow = "0 2px 16px rgba(168,85,247,.08), 0 1px 3px rgba(0,0,0,.06)"; e.currentTarget.style.transform = "translateY(0)"; }}
@@ -51,10 +51,10 @@ export default function PaymentVariants() {
             {/* bottom accent bar */}
             <div className="absolute bottom-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={accentBar} />
 
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={iconBg}>
-              <Icon size={20} style={{ color: "#a855f7" }} />
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style={iconBg}>
+              <Icon size={24} style={{ color: "#a855f7" }} />
             </div>
-            <span className="font-semibold text-slate-700 text-sm">{label}</span>
+            <span className="font-semibold text-slate-700 text-base md:text-lg">{label}</span>
           </div>
         ))}
       </div>

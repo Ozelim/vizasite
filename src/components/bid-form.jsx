@@ -72,10 +72,13 @@ export default function BidForm() {
                 Выбрать услугу
               </label>
               <select className="w-full px-4 py-3 rounded-xl bg-background-light border-transparent focus:border-primary focus:ring-0 shadow">
-                <option>Оформление визы</option>
-                <option>ВНЖ / ПМЖ</option>
-                <option>ИИН / Банковская карта</option>
-                <option>Трудоустройство за рубежом</option>
+                <option>Виза (краткосрочная/долгосрочная)</option>
+                <option>РВП (разрешение на временное проживание)</option>
+                <option>ВНЖ (вид на жительство)</option>
+                <option>Регистрация иностранного гражданина</option>
+                <option>Разрешение на работу</option>
+                <option>Приглашение для визы</option>
+                <option>Продление документов</option>
               </select>
             </div>
             <button className="w-full bg-primary hover:bg-primary/90 text-white py-4 rounded-xl font-bold soft-shadow shadow-lg transition-all">
