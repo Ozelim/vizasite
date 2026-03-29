@@ -724,7 +724,7 @@ import { VisaCalculatorButton } from "@/components/visa-calculator/visa-calculat
 
 /* ─── design tokens (same as main visa page) ─── */
 const gradStyle = {
-  background: "linear-gradient(135deg, #dca7f2 0%, #a855f7 45%, #7c3aed 100%)",
+  background: "linear-gradient(135deg, #c084fc 0%, #9333ea 45%, #6b21a8 100%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
@@ -792,7 +792,7 @@ function PageDiagBg({ bands = 9 }) {
                   [edge]: "-6%",
                   width: "58%",
                   height: "180%",
-                  background: `linear-gradient(${gDir},rgba(220,167,242,.11) 0%,rgba(168,85,247,.07) 55%,transparent 85%)`,
+                  background: `linear-gradient(${gDir},rgba(192,132,252,.13) 0%,rgba(147,51,234,.09) 55%,transparent 85%)`,
                   transform: `rotate(${deg})`,
                   transformOrigin: R ? "top right" : "top left",
                   borderRadius: "64px",
@@ -805,11 +805,11 @@ function PageDiagBg({ bands = 9 }) {
                   [edge]: "4%",
                   width: "40%",
                   height: "160%",
-                  background: `linear-gradient(${gDir},rgba(220,167,242,.15) 0%,rgba(168,85,247,.09) 55%,transparent 90%)`,
+                  background: `linear-gradient(${gDir},rgba(192,132,252,.17) 0%,rgba(147,51,234,.11) 55%,transparent 90%)`,
                   transform: `rotate(${deg})`,
                   transformOrigin: R ? "top right" : "top left",
                   borderRadius: "44px",
-                  border: "1px solid rgba(220,167,242,.14)",
+                  border: "1px solid rgba(192,132,252,.18)",
                 }}
               />
               <div
@@ -819,11 +819,11 @@ function PageDiagBg({ bands = 9 }) {
                   [edge]: "15%",
                   width: "24%",
                   height: "140%",
-                  background: `linear-gradient(${gDir},rgba(220,167,242,.19) 0%,rgba(168,85,247,.11) 50%,transparent 85%)`,
+                  background: `linear-gradient(${gDir},rgba(192,132,252,.21) 0%,rgba(147,51,234,.13) 50%,transparent 85%)`,
                   transform: `rotate(${deg})`,
                   transformOrigin: R ? "top right" : "top left",
                   borderRadius: "28px",
-                  border: "1px solid rgba(220,167,242,.19)",
+                  border: "1px solid rgba(192,132,252,.22)",
                 }}
               />
               <div
@@ -834,7 +834,7 @@ function PageDiagBg({ bands = 9 }) {
                   width: "2px",
                   height: "140%",
                   background:
-                    "linear-gradient(180deg,transparent 0%,rgba(220,167,242,.5) 20%,rgba(168,85,247,.38) 80%,transparent 100%)",
+                    "linear-gradient(180deg,transparent 0%,rgba(192,132,252,.52) 20%,rgba(147,51,234,.42) 80%,transparent 100%)",
                   transform: `rotate(${deg})`,
                   transformOrigin: R ? "top right" : "top left",
                 }}
@@ -847,7 +847,7 @@ function PageDiagBg({ bands = 9 }) {
                   width: "1px",
                   height: "140%",
                   background:
-                    "linear-gradient(180deg,transparent 0%,rgba(220,167,242,.2) 40%,transparent 100%)",
+                    "linear-gradient(180deg,transparent 0%,rgba(192,132,252,.24) 40%,transparent 100%)",
                   transform: `rotate(${deg})`,
                   transformOrigin: R ? "top right" : "top left",
                 }}
@@ -860,8 +860,8 @@ function PageDiagBg({ bands = 9 }) {
                   width: "9px",
                   height: "9px",
                   borderRadius: "50%",
-                  background: "rgba(220,167,242,.6)",
-                  boxShadow: "0 0 14px 4px rgba(220,167,242,.28)",
+                  background: "rgba(192,132,252,.62)",
+                  boxShadow: "0 0 14px 4px rgba(147,51,234,.32)",
                 }}
               />
             </div>
@@ -878,7 +878,7 @@ function SectionHeader({ eyebrow, title, subtitle }) {
     <div className="mb-10">
       <p
         className="text-xs font-semibold uppercase tracking-widest mb-1"
-        style={{ color: "#dca7f2" }}
+        style={{ color: "#7c3aed" }}
       >
         {eyebrow}
       </p>
@@ -1128,7 +1128,7 @@ export default function Page() {
               {/* text */}
               <div className="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center">
                 <p className="text-slate-700 leading-relaxed mb-6">
-                  <span className="font-semibold" style={{ color: "#a855f7" }}>
+                  <span className="font-semibold" style={{ color: "#7c3aed" }}>
                     Наш визовый центр
                   </span>{" "}
                   помогает иностранным гражданам оформить документы для
@@ -1146,7 +1146,7 @@ export default function Page() {
                 >
                   <p
                     className="font-bold text-sm uppercase tracking-widest mb-4"
-                    style={{ color: "#a855f7" }}
+                    style={{ color: "#7c3aed" }}
                   >
                     Мы помогаем с:
                   </p>
@@ -1174,7 +1174,7 @@ export default function Page() {
 
                 <p
                   className="mt-6 font-semibold text-lg"
-                  style={{ color: "#a855f7" }}
+                  style={{ color: "#7c3aed" }}
                 >
                   Обращайтесь — будем рады помочь! 🤝
                 </p>

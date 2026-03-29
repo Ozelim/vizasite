@@ -2,7 +2,7 @@ import React from "react";
 import { Banknote, CreditCard, Landmark } from "lucide-react";
 
 const gradStyle = {
-  background: "linear-gradient(135deg, #dca7f2 0%, #a855f7 45%, #7c3aed 100%)",
+  background: "linear-gradient(135deg, #c084fc 0%, #9333ea 45%, #6b21a8 100%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
@@ -22,7 +22,7 @@ export default function PaymentVariants() {
 
       {/* header */}
       <div className="mb-10">
-        <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#dca7f2" }}>
+        <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#7c3aed" }}>
           Удобно для вас
         </p>
         <h2 className="font-bold tracking-tight mb-2" style={{ fontSize: "clamp(2rem,4.5vw,3.2rem)", lineHeight: 1.1, ...gradStyle }}>
@@ -30,8 +30,8 @@ export default function PaymentVariants() {
         </h2>
         <div className="flex items-center gap-3 mt-4">
           <div className="h-[2px] w-16 rounded-full" style={accentBar} />
-          <div className="h-[1px] w-8 rounded-full" style={{ background: "rgba(220,167,242,.3)" }} />
-          <div className="h-[1px] w-4 rounded-full" style={{ background: "rgba(220,167,242,.15)" }} />
+          <div className="h-px w-8 rounded-full" style={{ background: "rgba(220,167,242,.3)" }} />
+          <div className="h-px w-4 rounded-full" style={{ background: "rgba(220,167,242,.15)" }} />
         </div>
       </div>
 

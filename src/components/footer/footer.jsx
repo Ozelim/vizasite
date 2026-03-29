@@ -1,11 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {
-  MapPin,
-  Banknote,
-  Send,
-  Star,
-} from "lucide-react";
+import { MapPin, Banknote, Send, Star } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -13,36 +8,47 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">
-              Наши контакты
-            </h2>
-            <div className="mt-8 grid md:grid-cols-2 gap-8">
-              <Image
-                alt="Entrance to the office building"
-                className="rounded-lg w-full h-auto object-contain"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEZHb8QUz5F3KrrU7G5db4UjJxAKfULnKy7dzLpKAtAnumg7Vnp7SijC9Te4BTsQYHXcSkkROCn4X79HBTRISBtGV3ORZ9IaUe_VfI1Ttnxzblqsd9EegjrK_Ej9u81HSntHjU22_K8e6bv-0jiY5qbQTCPBlM89CMtQEX1A0QLkOOXTqt170K_QQBAVCMal5ewOKxryPqMhO33Q02VlaAGQEC9OVw_vqPTWmGW1wMwEVyCOBB5P3ljp--OqIVbYiQN5LlrYUb8MU"
-                width={400}
-                height={300}
-                style={{ width: "100%", height: "auto" }}
-                priority
-              />
-              <Image
-                alt="Map showing office location"
-                className="rounded-lg w-full h-auto object-cover"
-                src={'/footer1.jpeg'}
-                width={400}
-                height={300}
-                style={{ width: "100%", height: "auto" }}
-                priority
-              />
+            <h2 className="text-3xl font-bold text-slate-900">Наши контакты</h2>
+            {/* Картинки выводим на одном уровне с выравниванием по нижнему краю */}
+            <div className="mt-8 flex flex-col md:flex-row gap-8 items-end">
+              <div className="w-full flex flex-col items-center">
+                <Image
+                  alt="Entrance to the office building"
+                  className="rounded-lg w-full h-auto object-contain z-50"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEZHb8QUz5F3KrrU7G5db4UjJxAKfULnKy7dzLpKAtAnumg7Vnp7SijC9Te4BTsQYHXcSkkROCn4X79HBTRISBtGV3ORZ9IaUe_VfI1Ttnxzblqsd9EegjrK_Ej9u81HSntHjU22_K8e6bv-0jiY5qbQTCPBlM89CMtQEX1A0QLkOOXTqt170K_QQBAVCMal5ewOKxryPqMhO33Q02VlaAGQEC9OVw_vqPTWmGW1wMwEVyCOBB5P3ljp--OqIVbYiQN5LlrYUb8MU"
+                  width={400}
+                  height={300}
+                  style={{ width: "100%", height: "auto" }}
+                  priority
+                />
+              </div>
+              <div className="w-full flex flex-col items-center">
+                <Image
+                  alt="Map showing office location"
+                  className="rounded-lg w-4/5 h-auto object-cover mb-2 z-50"
+                  src={"/footer1.jpeg"}
+                  width={320}
+                  height={240}
+                  style={{ width: "80%", height: "auto" }}
+                  priority
+                />
+              </div>
             </div>
-            <p className="mt-6 flex items-start text-slate-600">
-              <MapPin className="text-primary mr-2 w-5 h-5 shrink-0" />
-              город Астана
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <p className="mt-2 flex items-start text-slate-600">
+                <MapPin className="text-primary mr-2 w-5 h-5 shrink-0" />
+                город Астана
+              </p>
+              <p className="mt-2 text-center text-slate-700 text-sm font-medium max-w-xs mx-auto">
+                Мукатаева Айгуль — Директор офиса. опыт работы более 20 лет
+              </p>
+            </div>
+
             {/* --- Партнеры блок --- */}
             <div className="mt-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Партнеры</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
+                Партнеры
+              </h3>
               <ul className="space-y-2 text-slate-600 text-base pl-1">
                 <li className="flex items-center">
                   <span className="w-2 h-2 rounded-full bg-primary mr-3 inline-block"></span>
@@ -68,41 +74,26 @@ export const Footer = () => {
         <div className="py-12 lg:mt-12 border-t border-slate-200">
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
             <div>
-              <div className="text-xl font-bold text-slate-800">
-                VISAPRO
-              </div>
+              <div className="text-xl font-bold text-slate-800">VISAPRO</div>
             </div>
             <div className="text-slate-800">
               <p className="text-2xl font-bold">+7 707 367 5161</p>
               <p className="text-sm">a.nsk_75@bk.ru</p>
             </div>
             <div className="text-slate-600">
-              <p className="font-semibold text-slate-800">
-                Режим работы
-              </p>
+              <p className="font-semibold text-slate-800">Режим работы</p>
               <p>Онлайн 24/7</p>
             </div>
             <div>
-              <p className="font-semibold text-slate-800">
-                Мы в соц.сетях
-              </p>
+              <p className="font-semibold text-slate-800">Мы в соц.сетях</p>
               <div className="flex space-x-3">
-                <a
-                  className="text-slate-500 hover:text-primary"
-                  href="#"
-                >
+                <a className="text-slate-500 hover:text-primary" href="#">
                   <Send className="h-6 w-6" />
                 </a>
-                <a
-                  className="text-slate-500 hover:text-primary"
-                  href="#"
-                >
+                <a className="text-slate-500 hover:text-primary" href="#">
                   <Send className="h-6 w-6" />
                 </a>
-                <a
-                  className="text-slate-500 hover:text-primary"
-                  href="#"
-                >
+                <a className="text-slate-500 hover:text-primary" href="#">
                   <Send className="h-6 w-6" />
                 </a>
               </div>
@@ -171,5 +162,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};

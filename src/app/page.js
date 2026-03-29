@@ -33,7 +33,7 @@ import { VisaCalculatorButton } from "@/components/visa-calculator/visa-calculat
 
 /* ─── design tokens ─── */
 const gradStyle = {
-  background: "linear-gradient(135deg, #dca7f2 0%, #a855f7 45%, #7c3aed 100%)",
+  background: "linear-gradient(135deg, #c084fc 0%, #9333ea 45%, #6b21a8 100%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
@@ -101,7 +101,7 @@ function PageDiagBg({ bands = 7 }) {
                   [edge]: "-6%",
                   width: "58%",
                   height: "180%",
-                  background: `linear-gradient(${gDir},rgba(220,167,242,.11) 0%,rgba(168,85,247,.07) 55%,transparent 85%)`,
+                  background: `linear-gradient(${gDir},rgba(192,132,252,.13) 0%,rgba(147,51,234,.09) 55%,transparent 85%)`,
                   transform: `rotate(${deg})`,
                   transformOrigin: R ? "top right" : "top left",
                   borderRadius: "64px",
@@ -114,11 +114,11 @@ function PageDiagBg({ bands = 7 }) {
                   [edge]: "4%",
                   width: "40%",
                   height: "160%",
-                  background: `linear-gradient(${gDir},rgba(220,167,242,.15) 0%,rgba(168,85,247,.09) 55%,transparent 90%)`,
+                  background: `linear-gradient(${gDir},rgba(192,132,252,.17) 0%,rgba(147,51,234,.11) 55%,transparent 90%)`,
                   transform: `rotate(${deg})`,
                   transformOrigin: R ? "top right" : "top left",
                   borderRadius: "44px",
-                  border: "1px solid rgba(220,167,242,.14)",
+                  border: "1px solid rgba(192,132,252,.18)",
                 }}
               />
               <div
@@ -128,11 +128,11 @@ function PageDiagBg({ bands = 7 }) {
                   [edge]: "15%",
                   width: "24%",
                   height: "140%",
-                  background: `linear-gradient(${gDir},rgba(220,167,242,.19) 0%,rgba(168,85,247,.11) 50%,transparent 85%)`,
+                  background: `linear-gradient(${gDir},rgba(192,132,252,.21) 0%,rgba(147,51,234,.13) 50%,transparent 85%)`,
                   transform: `rotate(${deg})`,
                   transformOrigin: R ? "top right" : "top left",
                   borderRadius: "28px",
-                  border: "1px solid rgba(220,167,242,.19)",
+                  border: "1px solid rgba(192,132,252,.22)",
                 }}
               />
               <div
@@ -143,7 +143,7 @@ function PageDiagBg({ bands = 7 }) {
                   width: "2px",
                   height: "140%",
                   background:
-                    "linear-gradient(180deg,transparent 0%,rgba(220,167,242,.5) 20%,rgba(168,85,247,.38) 80%,transparent 100%)",
+                    "linear-gradient(180deg,transparent 0%,rgba(192,132,252,.52) 20%,rgba(147,51,234,.42) 80%,transparent 100%)",
                   transform: `rotate(${deg})`,
                   transformOrigin: R ? "top right" : "top left",
                 }}
@@ -156,7 +156,7 @@ function PageDiagBg({ bands = 7 }) {
                   width: "1px",
                   height: "140%",
                   background:
-                    "linear-gradient(180deg,transparent 0%,rgba(220,167,242,.2) 40%,transparent 100%)",
+                    "linear-gradient(180deg,transparent 0%,rgba(192,132,252,.24) 40%,transparent 100%)",
                   transform: `rotate(${deg})`,
                   transformOrigin: R ? "top right" : "top left",
                 }}
@@ -169,8 +169,8 @@ function PageDiagBg({ bands = 7 }) {
                   width: "9px",
                   height: "9px",
                   borderRadius: "50%",
-                  background: "rgba(220,167,242,.6)",
-                  boxShadow: "0 0 14px 4px rgba(220,167,242,.28)",
+                  background: "rgba(192,132,252,.62)",
+                  boxShadow: "0 0 14px 4px rgba(147,51,234,.32)",
                 }}
               />
             </div>
@@ -198,7 +198,7 @@ function SectionHeader({ eyebrow, title, subtitle }) {
     <div className="mb-10">
       <p
         className="text-xs font-semibold uppercase tracking-widest mb-1"
-        style={{ color: "#dca7f2" }}
+        style={{ color: "#7c3aed" }}
       >
         {eyebrow}
       </p>
@@ -405,7 +405,7 @@ function BlogCard({ src, badge, title, excerpt, date, link }) {
       </h3>
       <p className="text-slate-500 text-sm line-clamp-3 mb-4">{excerpt}</p>
       <div className="flex items-center justify-between">
-        <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+        <span className="text-xs font-semibold uppercase tracking-wider text-violet-600">
           {date}
         </span>
         <a
@@ -652,7 +652,7 @@ export default function Home() {
                 style={{
                   background: "rgba(220,167,242,.15)",
                   border: "0.5px solid rgba(220,167,242,.4)",
-                  color: "#dca7f2",
+                  color: "#7c3aed",
                 }}
               />
               <div className="relative z-10">
@@ -842,7 +842,7 @@ export default function Home() {
                 style={{
                   background: "rgba(220,167,242,.15)",
                   border: "0.5px solid rgba(220,167,242,.4)",
-                  color: "#dca7f2",
+                  color: "#7c3aed",
                 }}
               >
                 🛡️ Партнёр · Nomad Insurance
@@ -888,7 +888,7 @@ export default function Home() {
               />
               <p
                 className="text-sm font-semibold uppercase tracking-widest mb-3"
-                style={{ color: "#dca7f2" }}
+                style={{ color: "#7c3aed" }}
               >
                 О страховании
               </p>
@@ -900,11 +900,11 @@ export default function Home() {
               </p>
               <p className="text-slate-600 text-sm leading-relaxed">
                 Предлагаем как{" "}
-                <span className="font-semibold" style={{ color: "#a855f7" }}>
+                <span className="font-semibold" style={{ color: "#7c3aed" }}>
                   обязательное страхование
                 </span>
                 , так и{" "}
-                <span className="font-semibold" style={{ color: "#a855f7" }}>
+                <span className="font-semibold" style={{ color: "#7c3aed" }}>
                   добровольное медицинское страхование
                 </span>{" "}
                 для выезжающих за границу.
@@ -923,7 +923,7 @@ export default function Home() {
               />
               <p
                 className="text-sm font-semibold uppercase tracking-widest mb-3"
-                style={{ color: "#dca7f2" }}
+                style={{ color: "#7c3aed" }}
               >
                 Почему важно
               </p>
@@ -941,7 +941,7 @@ export default function Home() {
               >
                 <p
                   className="text-sm font-semibold"
-                  style={{ color: "#a855f7" }}
+                  style={{ color: "#7c3aed" }}
                 >
                   Страхование — это не расход, а защита бюджета и здоровья.
                 </p>
@@ -951,7 +951,6 @@ export default function Home() {
 
           {/* coverage */}
           <SectionHeader
-            eyebrow="Полис"
             title="Страховой полис покрывает"
             subtitle="Комплексная защита на весь период вашей поездки"
           />
@@ -1094,7 +1093,7 @@ export default function Home() {
           {/* advantages */}
           <SectionHeader
             eyebrow="Nomad Insurance"
-            title="Преимущества"
+            title="Преимущества Nomad Insurance"
             subtitle="Почему тысячи туристов выбирают Nomad Insurance"
           />
           <div className="flex flex-wrap gap-4 mb-16">
@@ -1248,27 +1247,28 @@ export default function Home() {
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             <BlogCard
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmYOf_hW1pOQ-GdqE4Hue0hTpVJIeYNNF-9pSDwS4PYlIvVOdJmg4ux31OXFcCJjvUOSC90XMPgfchtZhVR4wL16CDkNpUyuw-FA1nlwJCoe15Ek9t34KGv6UhFJYvJd8TOYKKEu99JAMshcxHz4GUAB7NbaroGJ31HSVqYtEWYNYZK-Bee_ZQTmMzY4XHiKvdoJa1YA7VpzbR6HjSvl_0hImV-ZN1SeV0l2-eI8zzcb2I_Z4p0d73MbtvKYyX_2ib8RGR46JNSQc"
+              src="/q.png"
               badge="Гайд"
-              title="Как получить ВНЖ в Казахстане в 2026 году?"
-              excerpt="Подробная инструкция по сбору документов, срокам рассмотрения и основным требованиям для получения вида на жительство..."
-              date="12 Октября 2026"
+              title="Как получить вид на жительство в Казахстане?"
+              excerpt="1. Заявление-анкета о выдаче разрешения на постоянное проживания в Республике Казахстан согласно приложению 4 к настоящим Правилам выдачи иностранцам и лицам без гражданства разрешения на временное и постоянное проживание в Республике Казахстан (далее – Правила).
+2. Копия и подлинник (для сверки) заграничного паспорта, документ лица без гражданства услугополучателя, срок действия, которых на день подачи заявления свыше 180 календарных дней...."
+              date="12 Июнь 2025"
               link="https://egov.kz/cms/ru/articles/for_foreigners/vid_na_jitelstvo"
             />
             <BlogCard
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC8QF-dedHBSPL-QG5238jDF-6frXS5LdTOBaesD08gjVXWIY-mDiu_tTCZJMaSHWPLCXnZAouFLF_TZ1ZEfeTTAOCIxDh5cMa9IuaHnpbhR80ZHEVMMmunBOd_Ym5I2nHhMYKkjzNNKW1FXHdDzj45eRD_wWLlL0zLpSgEu7OovQS-8AK0gZmHFAthI8ql0Zm3-YLv-V3pEpihE9eIEjH17srx__7w5g3oVzcU_Ab8V-vcpd0HZ9CknpoDXEHjrfO8riU4xSH6-o"
+              src="/w.png"
               badge="Бизнес"
-              title="Digital Nomad Visa: Новые возможности для IT"
-              excerpt="Казахстан запустил программу для цифровых кочевников. Разбираемся, кто может претендовать и какие льготы это дает..."
-              date="05 Октября 2026"
+              title="«Digital Nomad Residency» для привлечения мировых IT-талантов"
+              excerpt="Программа «Digital Nomad Residency» ориентирована на привлечение иностранных специалистов, работающих в сфере IT. Она предоставляет возможность получить разрешение на постоянное проживание (РПП) в Казахстане в упрощённом порядке...."
+              date="4 марта 2025"
               link="https://egov.kz/cms/ru/news/digital_nomad_residency"
             />
             <BlogCard
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAE8JWIqZxdXbN47Jxtwla685FfeS2LhXQT1qyh9leH4msvAFnAlh0mE_spieXkzZH1ShFnjgpQF8-N0L1HsJkxeu5aZku3yT87wexyhKR_MtdSN4Med6fbS8g5FZ7n_moZ1obfQDvIDEXlEf8P13kbKHw5mN1LemXM77DBD_AecKW9R6XHDhSflZWhmMEPyxfk6qtND0SRVkjdJWsGLk0-eHx8_DUS0ddMfJYLx26taLWyA0Qv2EPFoNQh3k2PpGDj9HKfTF0BIE"
+              src={'/e.png'}
               badge="Законодательство"
-              title="Изменения в миграционном учете"
-              excerpt="Важные поправки в законодательстве РК, которые вступают в силу с начала следующего месяца. О чем нужно знать иностранцам..."
-              date="28 Сентября 2026"
+              title="Правила въезда-выезда иностранных граждан"
+              excerpt="Согласно действующим правилам, принимающая сторона обязана уведомить миграционную службу о прибытии иностранца в Казахстан, а также о смене места жительства. Сделать это необходимо в течение 3 рабочих дней с даты въезда иностранца...."
+              date="6 Января 2025"
               link="https://egov.kz/cms/ru/articles/exit-entry_of_foreign_nationals"
             />
           </div>

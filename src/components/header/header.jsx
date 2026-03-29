@@ -19,7 +19,7 @@ import VisaCalculatorModal, {
 } from "../visa-calculator/visa-calculator-modal";
 
 const gradStyle = {
-  background: "linear-gradient(135deg, #dca7f2 0%, #a855f7 45%, #7c3aed 100%)",
+  background: "linear-gradient(135deg, #c084fc 0%, #9333ea 45%, #6b21a8 100%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
@@ -59,7 +59,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="flex gap-2 items-center"
             >
-              <span className="text-black">WhatsApp</span>
+              <span className="text-slate-950">WhatsApp</span>
               <Image src={"/whatsapp.svg"} alt="" width={36} height={36} />
               <span className="font-semibold">+7 707 367 5161</span>
             </a>
