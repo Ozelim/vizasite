@@ -30,7 +30,7 @@ import { useEffect, useRef } from "react";
 import BidForm from "@/components/bid-form";
 import PaymentVariants from "@/components/payment-variants";
 import { VisaCalculatorButton } from "@/components/visa-calculator/visa-calculator-modal";
-
+ 
 /* ─── design tokens ─── */
 const gradStyle = {
   color: "#5a2b8a",
