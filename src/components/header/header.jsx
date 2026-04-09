@@ -37,7 +37,7 @@ export default function Header() {
                   ...gradStyle,
                 }}
               >
-                VISAPRO
+                VIZAPRO
               </Link>
             </div>
 

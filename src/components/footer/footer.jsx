@@ -74,7 +74,7 @@ export const Footer = () => {
         <div className="py-12 lg:mt-12 border-t border-slate-200">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
             <div>
-              <div className="text-xl font-bold text-slate-800">VISAPRO</div>
+              <div className="text-xl font-bold text-slate-800">VIZAPRO</div>
             </div>
             <div className="text-slate-800">
               <p className="text-2xl font-bold">+7 707 367 5161</p>
