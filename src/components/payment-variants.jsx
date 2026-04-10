@@ -51,7 +51,7 @@ export default function PaymentVariants() {
             <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style={iconBg}>
               <Icon size={24} style={{ color: "#a855f7" }} />
             </div>
-            <span className="font-semibold text-slate-700 text-base md:text-lg">{label}</span>
+            <span className="font-semibold text-base md:text-lg" style={{...gradStyle}}>{label}</span>
           </div>
         ))}
       </div>

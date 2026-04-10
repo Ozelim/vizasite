@@ -2,13 +2,17 @@ import React from "react";
 import Image from "next/image";
 import { MapPin, Banknote, Send, Star } from "lucide-react";
 
+const gradStyle = {
+  color: "#5a2b8a",
+};
+
 export const Footer = () => {
   return (
     <footer className="bg-white pt-16 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Наши контакты</h2>
+            <h2 className="text-3xl font-bold" style={gradStyle}>Наши контакты</h2>
             {/* Картинки выводим на одном уровне с выравниванием по нижнему краю */}
             <div className="mt-8 flex flex-col md:flex-row gap-8 items-end">
               <div className="w-full flex flex-col items-center">
@@ -39,17 +43,17 @@ export const Footer = () => {
                 <MapPin className="text-primary mr-2 w-5 h-5 shrink-0" />
                 город Астана
               </p>
-              <p className="mt-2 text-center text-slate-700 text-sm font-medium max-w-xs mx-auto">
+              <p className="mt-2 text-center text-sm font-medium max-w-xs mx-auto" style={gradStyle}>
                 Мукатаева Айгуль — Директор офиса. опыт работы более 20 лет
               </p>
             </div>
 
             {/* --- Партнеры блок --- */}
-            <div className="mt-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">
+            <div className="mt-8" style={gradStyle}>
+              <h3 className="text-xl font-bold mb-4">
                 Партнеры
               </h3>
-              <ul className="space-y-2 text-slate-600 text-base pl-1">
+              <ul className="space-y-2 text-base pl-1">
                 <li className="flex items-center">
                   <span className="w-2 h-2 rounded-full bg-primary mr-3 inline-block"></span>
                   Ассоциация туристов Казахстана
@@ -74,9 +78,9 @@ export const Footer = () => {
         <div className="py-12 lg:mt-12 border-t border-slate-200">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
             <div>
-              <div className="text-xl font-bold text-slate-800">VIZAPRO</div>
+              <div className="text-xl font-bold" style={gradStyle}>VIZAPRO</div>
             </div>
-            <div className="text-slate-800">
+            <div style={gradStyle}>
               <p className="text-2xl font-bold">+7 707 367 5161</p>
               <p className="text-sm">a.nsk_75@bk.ru</p>
             </div>

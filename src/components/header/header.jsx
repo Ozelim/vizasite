@@ -48,7 +48,7 @@ export default function Header() {
           </div>
           <div className="hidden md:flex items-center space-x-2 z-50 ">
             <div className="hidden lg:flex items-center space-x-4">
-              <span>Прием заявок онлайн 24/7</span>
+              <span className="purple-glow">Прием заявок онлайн 24/7</span>
             </div>
             <a
               href="https://wa.me/77073675161"
@@ -56,14 +56,14 @@ export default function Header() {
               rel="noopener noreferrer"
               className="flex gap-2 items-center"
             >
-              <span className="text-slate-950">WhatsApp</span>
+              <span className="purple-glow">WhatsApp</span>
               <Image src={"/whatsapp.svg"} alt="" width={36} height={36} />
-              <span className="font-semibold">+7 707 367 5161</span>
+              <span className="font-bold! purple-glow">+7 707 367 5161</span>
             </a>
           </div>
         </div>
         <div className="flex md:hidden flex-col space-x-2">
-          <div className="flex items-center space-x-4 text-slate-600">
+          <div className="flex items-center space-x-4">
             <span>Прием заявок онлайн 24/7</span>
           </div>
           <a
@@ -74,7 +74,7 @@ export default function Header() {
           >
             <span className="text-slate-500">WhatsApp</span>
             <Image src={"/whatsapp.svg"} alt="" width={36} height={36} />
-            <span className="font-semibold">+7 707 367 5161</span>
+            <span className="font-semibold purple-glow">+7 707 367 5161</span>
           </a>
         </div>
 

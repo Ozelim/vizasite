@@ -372,7 +372,7 @@ export default function Page() {
                 <Image
                   alt="Almaty Architecture"
                   className="w-full h-full md:object-cover soft-shadow shadow-lg "
-                  src="/outsiders-hero.jpeg"
+                  src="/outsiders-hero.png"
                   height={500}
                   width={500}
                   data-alt="Modern Almaty architecture reflecting city life"
